@@ -93,7 +93,7 @@
 
           <div class="col-lg-4">
             <div class="portfolio-info">
-              <h3>Unauthorized Load Detection with Stereo Camera</h3>
+              <h3>Fusion-Based 3D Shape Analysis in A Noisy Environment</h3>
               <ul>
                 <li><strong>Supervisor</strong>: Dr. Saeid Shamaghdari, Assistant Professor at the Iran University of Science and Technology</li>
                 <!-- <li><strong></strong>: ASU Company</li> -->
@@ -104,12 +104,14 @@
             <div class="portfolio-description">
               <!-- <h2>Unauthorized Load Detection with Stereo Camera</h2> -->
               <p>
-                In this project, our team worked on the detection and statistical analysis of cars and trucks driving on a highway.
-                We used stereo cameras for this purpose, firstly, the vehicles are detected using the YOLO algorithm,
-                then the vehicle and its load are segmented using Fusion-Net. Afterward, the left and right images from the
-                camera were used to create a point cloud of the whole system, after denoising the data, a dynamic wire-frame is
-                fitted to the vehicle, and after several statistical refinements, it’s decided whether the load on the car is
-                physically legal or non-legal.
+                In this project, my team and I proposed a fusion-based multi-stage approach that performs 3D shape analysis
+                on an object within a noisy environment using a commercial stereo camera that has a short baseline. The first 
+                stage uses convolutional neural networks (CNNs) to extract the object from a crowded scene. A weighted optimization 
+                method is used in the second stage to fit the deformable wireframe and estimate its 3D pose. The estimated 3D structure 
+                is used for shape analysis. The output of each stage is optimally determined by combining 2D/3D information and is given 
+                as input to the next stage. We evaluated our method on a rough and noisy dataset gathered from a crowded highway and achieved 
+                impressive results.
+
               </p>
             </div>
           </div>
