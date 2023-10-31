@@ -5,16 +5,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Amirhossein Kazerouni</title>
+  <title>iPortfolio Bootstrap Template - Index</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/AH.png" rel="icon">
   <link href="assets/img/AH.png" rel="apple-touch-icon">
-  <!-- From Shutterstock:1696026268 -->
-  
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -26,13 +23,15 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
-  * Template Name: MyResume - v4.2.0
-  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Template Name: iPortfolio
+  * Updated: Jul 27 2023 with Bootstrap v5.3.1
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
@@ -41,35 +40,44 @@
 <body>
 
   <!-- ======= Mobile nav toggle button ======= -->
-  <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
   <!-- ======= Header ======= -->
-  <header id="header" class="d-flex flex-column justify-content-center">
+  <header id="header">
+    <div class="d-flex flex-column">
 
-    <nav id="navbar" class="navbar nav-menu">
-      <ul>
-        <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-        <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-        <li><a href="#publication" class="nav-link scrollto"><i class="bx bx-book"></i> <span>Publications</span></a></li>
-        <!-- <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li> -->
-        <!-- <li><a href="#awards" class="nav-link scrollto"><i class="bx bx-medal"></i> <span>Awards</span></a></li> -->
-        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Projects</span></a></li>
-      </ul>
-    </nav><!-- .nav-menu -->
+      <div class="profile">
+        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Amirhossein <br> Kazerouni</a></h1>
+        <div class="social-links mt-3 text-center">
+          <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
+          <a href="mailto:amirhossein477@gmail.com" class="gmail"> <i class='bx bx-mail-send'></i></a>
+          <a href="https://github.com/amirhossein-kz" class="github"><i class='bx bxl-github'></i></a>
+          <!-- <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> -->
+          <!-- <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> -->
+          <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
+          <a href="https://www.linkedin.com/in/amirhossein477/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://scholar.google.com/citations?hl=en&user=aKDCc3MAAAAJ" class="google scholar"><i class="bx bxs-graduation"></i></a>
+        </div>
+      </div>
 
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="#news" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>News</span></a></li>
+          <li><a href="#publications" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Publications</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center">
-    <div class="container" data-aos="zoom-in" data-aos-delay="100">
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
       <h1>Amirhossein Kazerouni</h1>
       <p>I'm a <span class="typed" data-typed-items="Researcher, Programmer, Developer"></span></p>
-      <div class="social-links">
-        <a href="mailto:amirhossein477@gmail.com" target="_blank" class="gmail"> <i class='bx bx-mail-send'></i></a>
-        <a href="https://github.com/amirhossein-kz" target="_blank" class="github"><i class='bx bxl-github'></i></a>
-        <a href="https://www.linkedin.com/in/amirhossein477/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        <a href="https://scholar.google.com/citations?hl=en&user=aKDCc3MAAAAJ" target="_blank" class="google scholar"><i class="bx bxs-graduation"></i></a>
-      </div> 
     </div>
   </section><!-- End Hero -->
 
@@ -77,616 +85,376 @@
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
+      <div class="container">
 
         <div class="section-title">
           <h2>About</h2>
-          <p>I'm a curious and intuitive researcher passionate about Computer Vision, Machine Learning, and Deep Learning.
-            My area of interest includes but is not limited to Transformers, medical image analysis, generative models,
-            computer graphics, and object recognition. 
-
-            It is always my pleasure to discuss topics related to research. Feel free to email me!
-            </p>
+          <p>Hi, I’m Amirhossein! 👋 <br><br> I'm a curious researcher who loves to explore the frontiers of Computer Vision, Machine Learning, and Deep Learning. My area of interest includes but is not limited to Transformers, medical image analysis, generative models, implicit neural representations, and object recognition. It is always my pleasure to discuss topics related to research. Feel free to email me! </p>
         </div>
 
-        <div class="row">
-          <div class="col-lg-4">
-            <img src="assets/img/profile-img.png" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content">
-            <h3>Electrical Engineering Student</h3>
-            <p class="fst-italic">
-            </p>
-            <div class="row">
-              <div class="lg-6">
-                <ul>
-                  <!-- <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>6 March 1999</span></li> -->
-                  <li><i class="bi bi-chevron-right"></i> <strong>University:</strong> <span>Iran University of Science and Technology, Tehran, Iran</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor of Science</span></li>
-                  <!-- <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+98917 237 2276</span></li> -->
-                  <li><i class="bi bi-chevron-right"></i> <strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?hl=en&user=aKDCc3MAAAAJ" target="_blank">Publications</a></li>                 
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <a href="mailto: amirhossein477@gmail.com" target="_blank">amirhossein477@gmail.com</a></li>
-                  <!-- <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Tehran, Iran</span></li> -->
 
-                </ul>
-              </div>    
+        <div class="col-lg-12 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <h3>Experience</h3>
+          <br>
+          <div class="row">
+            <div class="col-lg-9">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i><b>Remote Research Assistant</b>, RWTH University, Aachen, Germany</li>
+                <li><i class="bi bi-chevron-right"></i><b>Co-founder</b>,&nbsp;<a href="https://www.linkedin.com/company/air-center/">AIR Center</a>, Tehran, Iran</li>
+                <li><i class="bi bi-chevron-right"></i><b>B.Sc. in Electrical Engineering</b>, Iran University of Science and Technology, Iran</li>
+              </ul>
             </div>
-            <!-- <p>
-              Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-              Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
-            </p> -->
+            <div class="col-lg-3">
+              <ul>
+                <li><i class=""></i>Mar. 2022 - Present</li>
+                <li><i class=""></i>Jul. 2020 - Jul. 2022</li>
+                <li><i class=""></i>Sep. 2017 - Feb. 2022</li>
+              </ul>
+            </div>
           </div>
         </div>
+        
 
       </div>
     </section><!-- End About Section -->
 
-    <!-- ======= Facts Section ======= -->
-    <!--
-    <section id="facts" class="facts">
-      <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
-          <h2>Facts</h2>
-          <p>I have worked on Artificial Intelligence for about three years. During my academic education,
-            I have done numerous minor and grand projects, six of which were prominent, won 7 domestic and international prizes, and
-            published one paper. These have helped me lift the spirit of teamwork and motivation to work in this amazing field
-            and obtain a high level of experience.
-          </p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Years Experience</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-            <div class="count-box">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Projects</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <i class="bi bi-book"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Publications</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <i class="bi bi-award"></i>
-              <span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Awards</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section> -->
-    <!-- End Facts Section -->
-
-
-    <!-- ======= Publication ======= -->
-    <section id="publication" class="publication">
-      <div class="container" data-aos="fade-up">
+    <!-- ======= News Section ======= -->
+    <section id="news" class="news section-bg">
+      <div class="container">
 
       <div class="section-title">
-        <h2>Publications</h2>
+        <h2>News</h2>
       </div>
-      <div>
-      <div>
-        <div>
-
-       
-        <article class="post">
-          <p style="float: left;"><img src="assets/img/diffusion.png" height="200px" width="250px"></p>
-          <h2 class="post-title" style="margin-left:7cm;"><a href="">Diffusion models in medical imaging: A comprehensive survey</a></h2>
-          <p style="margin-left:7cm;">In this paper, we provide a systematic taxonomy of diffusion models in the medical domain and propose a multi-perspective categorization based on their application, imaging modality, organ of interest, and algorithms.
-          <div class="row">
-            <div class="lg-6">
-              <ul>
-                <li><i class="bi"></i> <strong>Journal:</strong> <span>Accepted in <b>Medical Image Analaysis Journal</b></span></li>
-                <li><i class="bi"></i> <strong>Paper:</strong> <span> <a href="https://arxiv.org/abs/2211.07804" target="_blank">Download</a></span></li>
-                <li><i class="bi"></i> <strong>Github:</strong> <span> <a href="https://github.com/amirhossein-kz/Awesome-Diffusion-Models-in-Medical-Imaging" target="_blank">Link</a></span></li>
-              </ul>
-            </div>  
-          </div>
-        </article>
-
-        <br></br>
-
-        <article class="post">
-          <p style="float: left;"><img src="assets/img/msformer.png" height="200px" width="250px"></p>
-          <h2 class="post-title" style="margin-left:7cm;"><a href="">MS-Former: Multi-Scale Self-Guided Transformer for Medical Image Segmentation</a></h2>
-          <p style="margin-left:7cm;"> We propose a novel dual-branch transformer network that operates on two different scales to encode global contextual dependencies while preserving local information.
-          <div class="row">
-            <div class="lg-6">
-              <ul>
-                <li><i class="bi"></i> <strong>Conferance:</strong> <span>Accepted in <b>MIDL 2023</b></span></li>
-                <li><i class="bi"></i> <strong>Paper:</strong> <span> <a href="https://openreview.net/pdf?id=pp2raGSU3Wx" target="_blank">Download</a></span></li>
-                <li><i class="bi"></i> <strong>Github:</strong> <span> <a href="https://github.com/mindflow-institue/MS-Former" target="_blank">Link</a></span></li>
-              </ul>
-            </div>  
-          </div>
-        </article>
-
-        <br></br>  
-
-        <article class="post">
-          <p style="float: left;"><img src="assets/img/mmcformer.png" height="200px" width="250px"></p>
-          <h2 class="post-title" style="margin-left:7cm;"><a href="">MMCFormer: Missing Modality Compensation Transformer for Brain Tumor Segmentation</a></h2>
-          <p style="margin-left:7cm;">In this paper, we propose a novel missing modality compensation network.
-          <div class="row">
-            <div class="lg-6">
-              <ul>
-                <li><i class="bi"></i> <strong>Conferance:</strong> <span>Accepted in <b>MIDL 2023</b></span></li>
-                <li><i class="bi"></i> <strong>Paper:</strong> <span> <a href="https://openreview.net/pdf?id=PD0ASSmvlE" target="_blank">Download</a></span></li>
-                <li><i class="bi"></i> <strong>Github:</strong> <span> <a href="https://github.com/mindflow-institue/MMCFormer" target="_blank">Link</a></span></li>
-              </ul>
-            </div>  
-          </div>
-        </article>
-
-        <br></br>
-
-        <article class="post">
-            <p style="float: left;"><img src="assets/img/transformer_review.png" height="200px" width="250px"></p>
-            <h2 class="post-title" style="margin-left:7cm;"><a href="">Advances in Medical Image Analysis with Vision Transformers: A Comprehensive Review</a></h2>
-            <p style="margin-left:7cm;">In this review, we provide an encyclopedic review of the applications of Transformers in medical imaging.
-              
-            <div class="row">
-              <div class="lg-6">
-                <ul>
-                  <li><i class="bi"></i> <strong>Journal:</strong> <span>Submitted to Medical Image Analaysis Journal</span></li>
-                  <li><i class="bi"></i> <strong>Paper:</strong> <span> <a href="https://arxiv.org/abs/2301.03505" target="_blank">Download</a></span></li>
-                  <li><i class="bi"></i> <strong>Github:</strong> <span> <a href="https://github.com/moeinheidari/Awesome-Transformer" target="_blank">Link</a></span></li>
-                </ul>
-              </div>  
-            </div>
-        </article>
-        
-        <br></br>
-
-        <article class="post">
-          <p style="float: left;"><img src="assets/img/daeformer.png" height="200px" width="250px"></p>
-          <h2 class="post-title" style="margin-left:7cm;"><a href="">DAE-Former: Dual Attention-guided Efficient Transformer for Medical Image Segmentation</a></h2>
-          <p style="margin-left:7cm;">In this paper, we propose a novel method that seeks to provide an alternative perspective by efficiently designing the self-attention mechanism for medical image segmentation.
-            
-          <div class="row">
-            <div class="lg-6">
-              <ul>
-                <li><i class="bi"></i> <strong>Conferance:</strong> <span>Accepted in <b>MICCAI 2023 Workshop</b></span></li>
-                <li><i class="bi"></i> <strong>Paper:</strong> <span> <a href="https://arxiv.org/abs/2212.13504" target="_blank">Download</a></span></li>
-                <li><i class="bi"></i> <strong>Github:</strong> <span> <a href="https://github.com/mindflow-institue/DAEFormer" target="_blank">Link</a></span></li>
-              </ul>
-            </div>  
-          </div>
-        </article>
-      
-        <br></br>
-
-        <article class="post">
-          <p style="float: left;"><img src="assets/img/neurips_modula_system.jpg" height="200px" width="250px"></p>
-          <h2 class="post-title" style="margin-left:7cm;"><a href="">An Intelligent Modular Real-Time Vision-Based System for Environment Perception</a></h2>
-          <p style="margin-left:7cm;">This paper proposes a novel vision-based modular package to ensure
-            drivers’ safety by perceiving the environment. Each module is designed based
-            on accuracy and inference time to deliver real-time performance. As a result, the
-            proposed system can be implemented on a wide range of vehicles with minimum
-            hardware requirements.
-        </div>
-          <div class="row">
-            <div class="lg-6">
-              <ul>
-                <li><i class="bi"></i> <strong>Conferance:</strong> <span>Accepted in <b>NeurIPS 2022 Workshop</b> on Machine Learning for Autonomous Driving </span></li>
-                <li><i class="bi"></i> <strong>Paper:</strong> <span> <a href="https://ml4ad.github.io/files/papers2022/An%20Intelligent%20Modular%20Real-Time%20Vision-Based%20System%20for%20Environment%20Perception.pdf" target="_blank">Download</a></span></li>
-                <li><i class="bi"></i> <strong>Github:</strong> <span> <a href="https://github.com/Pandas-Team/Autonomous-Vehicle-Environment-Perception" target="_blank">Link</a></span></li>
-              </ul>
-            </div>  
-          </div>
-        </article>
-
-        <br></br>
-      
-        <article class="post">
-            <p style="float: left;"><img src="assets/img/ModelOverview.png" height="200px" width="250px"></p>
-            <h2 class="post-title" style="margin-left:7cm;"><a href="">HiFormer: Hierarchical Multi-scale Representations Using Transformers for Medical Image Segmentation</a></h2>
-            <p style="margin-left:7cm;">HiFormer is a novel method that efficiently bridges a CNN and a transformer for medical image segmentation. 
-              Specifically, we design two multi-scale
-              feature representations using the seminal Swin Transformer module and a CNN-based
-              encoder. 
-          </div>
-            <div class="row">
-              <div class="lg-6">
-                <ul>
-                  <li><i class="bi"></i> <strong>Conferance:</strong> <span>Accepted in <b>WACV 2023</b></span></li>
-                  <li><i class="bi"></i> <strong>Paper:</strong> <span> <a href="https://openaccess.thecvf.com/content/WACV2023/papers/Heidari_HiFormer_Hierarchical_Multi-Scale_Representations_Using_Transformers_for_Medical_Image_Segmentation_WACV_2023_paper.pdf" target="_blank">Download</a></span></li>
-                  <li><i class="bi"></i> <strong>Github:</strong> <span> <a href="https://github.com/amirhossein-kz/HiFormer" target="_blank">Link</a></span></li>
-                </ul>
-              </div>  
-            </div>
-        </article>
-
-        <br></br>
-
-        <article class="post">
-            <p style="float: left;"><img src="assets/img/Image1.jpg" height="200px" width="250px"></p>
-            <h2 class="post-title" style="margin-left:7cm;"><a href="">Ensemble Neural Representation Networks</a></h2>
-            <p style="margin-left:7cm;">Implicit Neural Representation (INR) has recently attracted considerable attention for
-              storing various types of signals in continuous forms The existing INR networks require lengthy training processes and high-performance
-              computational resources. In this paper, we propose a novel sub-optimal ensemble architecture for INR that resolves the aforementioned
-              problems.
-          </div>
-            <div class="row">
-              <div class="lg-6">
-                <ul>
-                  <li><i class="bi"></i> <strong>Conferance:</strong> <span>arXiv</span></li>
-                  <li><i class="bi"></i> <strong>Paper:</strong> <span> <a href="https://arxiv.org/abs/2110.04124" target="_blank">Download</a></span></li>
-                  <li><i class="bi"></i> <strong>Github:</strong> <span> <a href="https://github.com/AlirezaMorsali/ENRP" target="_blank">Link</a></span></li>
-                </ul>
-              </div>
-            </div>  
-        </article>
-      </div>
-        
-      </div>
-      </div>
-    </div>
-    </section><!-- End Publication Section -->
-    
-
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Projects</h2>
-          <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
-        </div>
-
+      <div class="col-lg-12 pt-4 pt-lg-0 content" data-aos="fade-up">
         <div class="row">
-          <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-AI">AI</li>
-              <!-- <li data-filter=".filter-web">Web</li> -->
+            <ul style="list-style: none; padding-left: 0;">
+              <p><i class="bi bi-chevron-right"></i> <strong>[Oct. 2023]</strong> Accepted two papers, <a href="https://arxiv.org/abs/2310.18846" style="color: #cf06cf;">INCODE</a> and <a href="https://arxiv.org/abs/2309.00121" style="color: #cf06cf;">D-LKA Net</a> at <a href="https://wacv2024.thecvf.com/">WACV'24</a>.</p>
+              <p><i class="bi bi-chevron-right"></i> <strong>[Oct. 2023]</strong> Our survey paper on <a href="https://arxiv.org/abs/2211.07804" style="color: #cf06cf;">vision Transformers in medical image analysis</a> has been accepted by <a href="https://www.sciencedirect.com/journal/medical-image-analysis">Medical Image Analysis Journal</a>.</p>
+              <p><i class="bi bi-chevron-right"></i> <strong>[Aug. 2023]</strong> Accepted one main <a href="https://arxiv.org/pdf/2309.00108" style="color: #cf06cf;">LaplacianFormer</a> and three workshop papers, <a href="https://arxiv.org/pdf/2308.02959" style="color: #cf06cf;">DermoSegDiff</a>, <a href="https://arxiv.org/pdf/2308.13442" style="color: #cf06cf;">WaveFormer</a>, and <a href="https://arxiv.org/pdf/2212.13504" style="color: #cf06cf;">DAE-Former</a> at <a href="https://conferences.miccai.org/2023/en/">MICCAI'23</a>.</p>
+              <p><i class="bi bi-chevron-right"></i> <strong>[Aug. 2023]</strong> Accepted two papers, <a href="https://openaccess.thecvf.com/content/ICCV2023W/CVAMD/html/Karimijafarbigloo_Self-Supervised_Semantic_Segmentation_Consistency_over_Transformation_ICCVW_2023_paper.html" style="color: #cf06cf;">S<sup>3</sup>-Net</a> and <a href="https://arxiv.org/abs/2307.16142" style="color: #cf06cf;">INR survey in medical imaging</a> at <a href="https://cvamd2023.github.io/">ICCV'23 CVAMD Workshop</a>.</p>
+              <p><i class="bi bi-chevron-right"></i> <strong>[Aug. 2022]</strong> Our survey paper on <a href="https://arxiv.org/abs/2211.07804" style="color: #cf06cf;">Diffusion models in medical imaging</a> has been accepted by the esteemed <a href="https://www.sciencedirect.com/journal/medical-image-analysis">Medical Image Analysis Journal</a>.</p>
+              <p><i class="bi bi-chevron-right"></i> <strong>[Apr. 2023]</strong> Accepted two papers, <a href="https://openreview.net/forum?id=pp2raGSU3Wx" style="color: #cf06cf;">MS-Former</a> and <a href="https://openreview.net/forum?id=PD0ASSmvlE" style="color: #cf06cf;">MMCFormer</a> for oral presentations at <a href="https://2023.midl.io/">MIDL'23</a>.</p>
+              <p><i class="bi bi-chevron-right"></i> <strong>[Oct. 2022]</strong> Our paper, <a href="https://openaccess.thecvf.com/content/WACV2023/html/Heidari_HiFormer_Hierarchical_Multi-Scale_Representations_Using_Transformers_for_Medical_Image_Segmentation_WACV_2023_paper.html" style="color: #cf06cf;">HiFormer</a>, on medical image segmentation accepted at <a href="https://wacv2023.thecvf.com/home">WACV’23</a>.</p>
+              <p><i class="bi bi-chevron-right"></i> <strong>[Oct. 2022]</strong> Our paper on real-time vision-based environment perception system accepted at <a href="https://nips.cc/virtual/2022/workshop/49981">NeurIPS'22 workshop</a>.</p>
+              <p><i class="bi bi-chevron-right"></i> <strong>[Sep. 2021]</strong> Successfully defended my bachelor thesis on designing, simulating, and building a self-driving car.</p>
             </ul>
-          </div>
         </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app filter-AI">
-            <div class="portfolio-wrap">
-              <img src="assets/img/IUST/1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Fusion-Based 3D Shape Analysis in a Noisy Environment</h4>
-                <p>AI</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/IUST/1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Fusion-Based 3D Shape Analysis in a Noisy Environment"><i class="bx bx-plus"></i></a>
-                  <a href="IUST.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Fusion-Based 3D Shape Analysis in a Noisy Environment"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-AI">
-            <div class="portfolio-wrap">
-              <img src="assets/img/Rahneshan/1.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Autonomous Vehicle Environment Perception</h4>
-                <p>AI</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/Rahneshan/1.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Autonomous Vehicle Environment Perception"><i class="bx bx-plus"></i></a>
-                  <a href="Rahneshan.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Autonomous Vehicle Environment Perception"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-AI">
-            <div class="portfolio-wrap">
-              <img src="assets/img/Thesis/1.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Design, Simulation, and Construction of an Autonomous Vehicle With Environment Perception, Planning, and Control Capabilities (Bachelor’s Thesis)</h4>
-                <p>AI</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/Thesis/1.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Design, Simulation, and Construction of an Autonomous Vehicle With Environment Perception, Planning, and Control Capabilities (Bachelor’s Thesis)"><i class="bx bx-plus"></i></a>
-                  <a href="Thesis.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Design, Simulation, and Construction of an Autonomous Vehicle With Environment Perception, Planning, and Control Capabilities (Bachelor’s Thesis)"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-AI">
-            <div class="portfolio-wrap">
-              <img src="assets/img/UT/1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>How To Obtain The Bird’s Eye View of a Soccer Game Regardless of Camera Angle Changes</h4>
-                <p>AI</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/UT/1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="How To Obtain The Bird’s Eye View of a Soccer Game Regardless of Camera Angle Changes"><i class="bx bx-plus"></i></a>
-                  <a href="UT.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="How To Obtain The Bird’s Eye View of a Soccer Game Regardless of Camera Angle Changes"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-AI">
-            <div class="portfolio-wrap">
-              <img src="assets/img/Fira/1.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Autonomous Car Simulation Based on AVIS Engine (FIRA Worldcup 2021)</h4>
-                <p>AI</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/Fira/1.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Autonomous Car Simulation Based on AVIS Engine (FIRA Worldcup 2021)"><i class="bx bx-plus"></i></a>
-                  <a href="FIRA.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Autonomous Car Simulation Based on AVIS Engine (FIRA Worldcup 2021)"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app filter-AI">
-            <div class="portfolio-wrap">
-              <img src="assets/img/PersianOCR/3.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Persian-OCR</h4>
-                <p>AI</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/PersianOCR/3.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Persian-OCR"><i class="bx bx-plus"></i></a>
-                  <a href="PersianOCR.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Persian-OCR"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-AI">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>SUSLIB</h4>
-                <p>AI</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SUSLIB"><i class="bx bx-plus"></i></a>
-                  <a href="SUSLIB.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="SUSLIB"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 3</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-        </div>
-
+      </div>      
       </div>
-    </section><!-- End Portfolio Section -->
+    </section><!-- End Skills Section -->
 
-    <!-- ======= Testimonials Section ======= -->
-    <!-- <section id="testimonials" class="testimonials section-bg">
-      <div class="container" data-aos="fade-up">
+
+    <!-- ======= Publications Section ======= -->
+    <section id="publications" class="resume">
+      <div class="container">
 
         <div class="section-title">
-          <h2>Testimonials</h2>
+          <h2>Publications</h2>
         </div>
 
-        <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
+      <!-- Article -4 -->
+      <article class="post">
+        <ul style="list-style-type: disc; margin-bottom: 3px; padding-left: 0;">
+          <li style="font-size: 18px;"><b>INCODE: Implicit Neural Conditioning with Prior Knowledge Embeddings</b></li>
+        </ul>
+        <p style="opacity: 0.8; margin-bottom: 3px;"><b>Amirhossein Kazerouni</b>, Reza Azad, Alireza Hosseini, Dorit Merhof, Ulas Bagci</p>
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-          </div>
-          <div class="swiper-pagination"></div>
+        <!-- Display the Journal, Paper, and GitHub information -->
+        <div>
+          <p style="margin-bottom: 3px;"><i class="fas fa-calendar-alt"></i> <strong>Conference:</strong> <span><b>WACV 2024</b></span></p>
+          <p style="margin-bottom: 3px;"><i class="fas fa-link"></i> <strong>Project Page:</strong> <span> <a href="https://xmindflow.github.io/incode" target="_blank">Link</a></span></p>
+          <p style="margin-bottom: 3px;"><i class="far fa-file-alt"></i> <strong>Paper:</strong> <span> <a href="https://arxiv.org/abs/2310.18846" target="_blank">Download</a></span></p>
+          <p style="margin-bottom: -10px;"><i class="fab fa-github"></i> <strong>GitHub:</strong> <span> <a href="https://github.com/xmindflow/INCODE" target="_blank">Link</a></span></p>
         </div>
+      </article>
 
+      <br></br>
+
+      <!-- Article -3 -->
+      <article class="post">
+        <ul style="list-style-type: disc; margin-bottom: 3px; padding-left: 0;">
+          <li style="font-size: 18px;"><b>Beyond Self-Attention: Deformable Large Kernel Attention for Medical Image Segmentation</b></li>
+        </ul>
+        <p style="opacity: 0.8; margin-bottom: 3px;">Reza Azad, Leon Niggemeier, Michael Huttemann, <b>Amirhossein Kazerouni</b>, Ehsan Khodapanah Aghdam, Yury Velichko, Ulas Bagci, Dorit Merhof</p>
+
+        <!-- Display the Journal, Paper, and GitHub information -->
+        <div>
+          <p style="margin-bottom: 3px;"><i class="fas fa-calendar-alt"></i> <strong>Conference:</strong> <span><b>WACV 2024</b></span></p>
+          <p style="margin-bottom: 3px;"><i class="far fa-file-alt"></i> <strong>Paper:</strong> <span> <a href="https://arxiv.org/abs/2309.00121" target="_blank">Download</a></span></p>
+          <p style="margin-bottom: -10px;"><i class="fab fa-github"></i> <strong>GitHub:</strong> <span> <a href="https://github.com/xmindflow/deformableLKA" target="_blank">Link</a></span></p>
+        </div>
+      </article>
+
+      <br></br>
+
+      <!-- Article -2 -->
+      <article class="post">
+        <ul style="list-style-type: disc; margin-bottom: 3px; padding-left: 0;">
+          <li style="font-size: 18px;"><b>Laplacian-Former: Overcoming the Limitations of Vision Transformers in Local Texture Detection</b></li>
+        </ul>
+        <p style="opacity: 0.8; margin-bottom: 3px;">Reza Azad, <b>Amirhossein Kazerouni</b>, Babak Azad, Ehsan Khodapanah Aghdam, Yury Velichko, Ulas Bagci, Dorit Merhof</p>
+
+        <!-- Display the Journal, Paper, and GitHub information -->
+        <div>
+          <p style="margin-bottom: 3px;"><i class="fas fa-calendar-alt"></i> <strong>Conference:</strong> <span><b>MICCAI 2023</b></span></p>
+          <p style="margin-bottom: 3px;"><i class="far fa-file-alt"></i> <strong>Paper:</strong> <span> <a href="https://arxiv.org/abs/2309.00108" target="_blank">Download</a></span></p>
+          <p style="margin-bottom: -10px;"><i class="fab fa-github"></i> <strong>GitHub:</strong> <span> <a href="https://github.com/xmindflow/Laplacian-Former" target="_blank">Link</a></span></p>
+        </div>
+      </article>
+  
+      <br></br>
+
+      <!-- Article -1 -->
+      <article class="post">
+        <ul style="list-style-type: disc; margin-bottom: 3px; padding-left: 0;">
+          <li style="font-size: 18px;"><b>Unlocking Fine-Grained Details with Wavelet-based High-Frequency Enhancement in Transformers</b></li>
+        </ul>
+        <p style="opacity: 0.8; margin-bottom: 3px;">Reza Azad, <b>Amirhossein Kazerouni</b>, Alaa Sulaiman, Afshin Bozorgpour, Ehsan Khodapanah Aghdam, Abin Jose, Dorit Merhof</p>
+
+        <!-- Display the Journal, Paper, and GitHub information -->
+        <div>
+          <p style="margin-bottom: 3px;"><i class="fas fa-calendar-alt"></i> <strong>Conference:</strong> <span><b>MICCAI 2023 MLMI Workshop</b></span></p>
+          <p style="margin-bottom: 3px;"><i class="far fa-file-alt"></i> <strong>Paper:</strong> <span> <a href="https://arxiv.org/abs/2308.13442" target="_blank">Download</a></span></p>
+          <p style="margin-bottom: -10px;"><i class="fab fa-github"></i> <strong>GitHub:</strong> <span> <a href="https://github.com/xmindflow/WaveFormer" target="_blank">Link</a></span></p>
+        </div>
+      </article>
+  
+      <br></br>
+
+      <!-- Article 0 -->
+      <article class="post">
+        <ul style="list-style-type: disc; margin-bottom: 3px; padding-left: 0;">
+          <li style="font-size: 18px;"><b>DermoSegDiff: A Boundary-aware Segmentation Diffusion Model for Skin Lesion Delineation</b></li>
+        </ul>
+        <p style="opacity: 0.8; margin-bottom: 3px;">Afshin Bozorgpour*, Yousef Sadegheih*, <b>Amirhossein Kazerouni*</b>, Reza Azad, Dorit Merhof</p>
+
+        <!-- Display the Journal, Paper, and GitHub information -->
+        <div>
+          <p style="margin-bottom: 3px;"><i class="fas fa-calendar-alt"></i> <strong>Conference:</strong> <span><b>MICCAI 2023 PRIME Workshop</b></span></p>
+          <p style="margin-bottom: 3px;"><i class="far fa-file-alt"></i> <strong>Paper:</strong> <span> <a href="https://arxiv.org/abs/2308.02959" target="_blank">Download</a></span></p>
+          <p style="margin-bottom: -10px;"><i class="fab fa-github"></i> <strong>GitHub:</strong> <span> <a href="https://github.com/xmindflow/DermoSegDiff" target="_blank">Link</a></span></p>
+        </div>
+      </article>
+  
+      <br></br>
+
+      <!-- Article 00 -->
+      <article class="post">
+        <ul style="list-style-type: disc; margin-bottom: 3px; padding-left: 0;">
+          <li style="font-size: 18px;"><b>Self-supervised Semantic Segmentation: Consistency over Transformation</b></li>
+        </ul>
+        <p style="opacity: 0.8; margin-bottom: 3px;">Sanaz Karimijafarbigloo, Reza Azad, <b>Amirhossein Kazerouni</b>, Yury Velichko, Ulas Bagci, Dorit Merhof</p>
+
+        <!-- Display the Journal, Paper, and GitHub information -->
+        <div>
+          <p style="margin-bottom: 3px;"><i class="fas fa-calendar-alt"></i> <strong>Conference:</strong> <span><b>ICCV 2023 CVAMD Workshop</b></span></p>
+          <p style="margin-bottom: 3px;"><i class="far fa-file-alt"></i> <strong>Paper:</strong> <span> <a href="https://arxiv.org/abs/2309.00143" target="_blank">Download</a></span></p>
+          <p style="margin-bottom: -10px;"><i class="fab fa-github"></i> <strong>GitHub:</strong> <span> <a href="https://github.com/xmindflow/SSCT" target="_blank">Link</a></span></p>
+        </div>
+      </article>
+  
+      <br></br>
+
+      <!-- Article 000 -->
+      <article class="post">
+        <ul style="list-style-type: disc; margin-bottom: 3px; padding-left: 0;">
+          <li style="font-size: 18px;"><b>Implicit neural representation in medical imaging: A comparative survey</b></li>
+        </ul>
+        <p style="opacity: 0.8; margin-bottom: 3px;">Amirali Molaei, Amirhossein Aminimehr, Armin Tavakoli, <b>Amirhossein Kazerouni</b>, Bobby Azad, Reza Azad, Dorit Merhof</p>
+
+        <!-- Display the Journal, Paper, and GitHub information -->
+        <div>
+          <p style="margin-bottom: 3px;"><i class="fas fa-calendar-alt"></i> <strong>Conference:</strong> <span><b>ICCV 2023 CVAMD Workshop</b></span></p>
+          <p style="margin-bottom: 3px;"><i class="far fa-file-alt"></i> <strong>Paper:</strong> <span> <a href="https://arxiv.org/abs/2307.16142" target="_blank">Download</a></span></p>
+          <p style="margin-bottom: -10px;"><i class="fab fa-github"></i> <strong>GitHub:</strong> <span> <a href="https://github.com/xmindflow/Awesome-Implicit-Neural-Representations-in-Medical-imaging" target="_blank">Link</a></span></p>
+        </div>
+      </article>
+  
+      <br></br>
+
+
+      <!-- Article 1 -->
+      <article class="post">
+        <ul style="list-style-type: disc; margin-bottom: 3px; padding-left: 0;">
+          <li style="font-size: 18px;"><b>Diffusion models in medical imaging: A comprehensive survey</b></li>
+        </ul>
+        <p style="opacity: 0.8; margin-bottom: 3px;"><b>Amirhossein Kazerouni</b>, Ehsan Khodapanah Aghdam, Moein Heidari, Reza Azad, Mohsen Fayyaz, Ilker Hacihaliloglu, Dorit Merhof</p>
+
+        <!-- Display the Journal, Paper, and GitHub information -->
+        <div>
+          <p style="margin-bottom: 3px;"><i class="fas fa-calendar-alt"></i> <strong>Journal:</strong> <span><b>Medical Image Analysis (MedIA)</b></span></p>
+          <p style="margin-bottom: 3px;"><i class="far fa-file-alt"></i> <strong>Paper:</strong> <span> <a href="https://arxiv.org/abs/2211.07804" target="_blank">Download</a></span></p>
+          <p style="margin-bottom: -10px;"><i class="fab fa-github"></i> <strong>GitHub:</strong> <span> <a href="https://github.com/amirhossein-kz/Awesome-Diffusion-Models-in-Medical-Imaging" target="_blank">Link</a></span></p>
+        </div>
+      </article>
+  
+      <br></br>
+
+      <!-- Article 4 -->
+      <article class="post">
+        <ul style="list-style-type: disc; margin-bottom: 3px; padding-left: 0;">
+          <li style="font-size: 18px;"><b>Advances in Medical Image Analysis with Vision Transformers: A Comprehensive Review</b></li>
+        </ul>
+        <p style="opacity: 0.8; margin-bottom: 3px;">Reza Azad, <strong>Amirhossein Kazerouni</strong>, Moein Heidari, Ehsan Khodapanah Aghdam, Amirali Molaei, Yiwei Jia, Abin Jose, Rijo Roy, Dorit Merhof</p>
+        <div>
+          <p style="margin-bottom: 3px;"><i class="fas fa-calendar-alt"></i> <strong>Journal:</strong> <span><b>Medical Image Analysis (MedIA)</b></span></p>
+          <p style="margin-bottom: 3px;"><i class="far fa-file-alt"></i> <strong>Paper:</strong> <span> <a href="https://arxiv.org/abs/2301.03505" target="_blank">Download</a></span></p>
+          <p style="margin-bottom: -10px;"><i class="fab fa-github"></i> <strong>GitHub:</strong> <span> <a href="https://github.com/moeinheidari/Awesome-Transformer" target="_blank">Link</a></span></p>
+        </div>
+      </article>
+
+      <br></br>
+
+      <!-- Article 5 -->
+      <article class="post">
+        <ul style="list-style-type: disc; margin-bottom: 3px; padding-left: 0;">
+          <li style="font-size: 18px;"><b>DAE-Former: Dual Attention-guided Efficient Transformer for Medical Image Segmentation</b></li>
+        </ul>
+        <p style="opacity: 0.8; margin-bottom: 3px;">Reza Azad, René Arimond, Ehsan Khodapanah Aghdam, <strong>Amirhossein Kazerouni</strong>, Dorit Merhof</p>
+        <div>
+          <p style="margin-bottom: 3px;"><i class="fas fa-calendar-alt"></i> <strong>Conference:</strong> <span><b>MICCAI 2023 PRIME Workshop</b></span></p>
+          <p style="margin-bottom: 3px;"><i class="far fa-file-alt"></i> <strong>Paper:</strong> <span> <a href="https://arxiv.org/abs/2212.13504" target="_blank">Download</a></span></p>
+          <p style="margin-bottom: -10px;"><i class="fab fa-github"></i> <strong>GitHub:</strong> <span> <a href="https://github.com/mindflow-institue/DAEFormer" target="_blank">Link</a></span></p>
+        </div>
+      </article>
+
+      <br></br>
+
+      <!-- Article 2 -->
+      <article class="post">
+        <ul style="list-style-type: disc; margin-bottom: 3px; padding-left: 0;">
+          <li style="font-size: 18px;"><b>MS-Former: Multi-Scale Self-Guided Transformer for Medical Image Segmentation</b></li>
+        </ul>
+        <p style="opacity: 0.8; margin-bottom: 3px;">Sanaz Karimijafarbigloo, Reza Azad, <strong>Amirhossein Kazerouni</strong>, Dorit Merhof</p>
+        <div>
+          <p style="margin-bottom: 3px;"><i class="fas fa-calendar-alt"></i> <strong>Conference:</strong> <span><strong>MIDL 2023 | Oral presentation</strong></span></p>
+          <p style="margin-bottom: 3px;"><i class="far fa-file-alt"></i> <strong>Paper:</strong> <span> <a href="https://openreview.net/pdf?id=pp2raGSU3Wx" target="_blank">Download</a></span></p>
+          <p style="margin-bottom: -10px;"><i class="fab fa-github"></i> <strong>GitHub:</strong> <span> <a href="https://github.com/mindflow-institute/MS-Former" target="_blank">Code</a></span></p>
+        </div>
+      </article>
+
+      <br></br>
+  
+      <!-- Article 3 -->
+      <article class="post">
+        <ul style="list-style-type: disc; margin-bottom: 3px; padding-left: 0;">
+          <li style="font-size: 18px;"><b>MMCFormer: Missing Modality Compensation Transformer for Brain Tumor Segmentation</b></li>
+        </ul>
+        <p style="opacity: 0.8; margin-bottom: 3px;">Sanaz Karimijafarbigloo, Reza Azad, <strong>Amirhossein Kazerouni</strong>, Saeed Ebadollahi, Dorit Merhof</p>
+        <div>
+          <p style="margin-bottom: 3px;"><i class="fas fa-calendar-alt"></i> <strong>Conference:</strong> <span><strong>MIDL 2023 | Oral presentation</strong></span></p>
+          <p style="margin-bottom: 3px;"><i class="far fa-file-alt"></i> <strong>Paper:</strong> <span> <a href="https://openreview.net/pdf?id=PD0ASSmvlE" target="_blank">Download</a></span></p>
+          <p style="margin-bottom: -10px;"><i class="fab fa-github"></i> <strong>GitHub:</strong> <span> <a href="https://github.com/mindflow-institue/MMCFormer" target="_blank">Link</a></span></p>
+        </div>
+      </article>
+
+      <br></br>
+
+      <!-- Article 7 -->
+      <article class="post">
+        <ul style="list-style-type: disc; margin-bottom: 3px; padding-left: 0;">
+          <li style="font-size: 18px;"><b>HiFormer: Hierarchical Multi-scale Representations Using Transformers for Medical Image Segmentation</b></li>
+        </ul>
+        <p style="opacity: 0.8; margin-bottom: 3px;">Moein Heidari*, <strong>Amirhossein Kazerouni*</strong>, Milad Soltany*, Reza Azad, Ehsan Khodapanah Aghdam, Julien Cohen-Adad, Dorit Merhof</p>
+        <div>
+          <p style="margin-bottom: 3px;"><i class="fas fa-calendar-alt"></i> <strong>Conference:</strong> <span><b>WACV 2023</b></span></p>
+          <p style="margin-bottom: 3px;"><i class="far fa-file-alt"></i> <strong>Paper:</strong> <span> <a href="https://openaccess.thecvf.com/content/WACV2023/papers/Heidari_HiFormer_Hierarchical_Multi-Scale_Representations_Using_Transformers_for_Medical_Image_Segmentation_WACV_2023_paper.pdf" target="_blank">Download</a></span></p>
+          <p style="margin-bottom: -10px;"><i class="fab fa-github"></i> <strong>GitHub:</strong> <span> <a href="https://github.com/amirhossein-kz/HiFormer" target="_blank">Link</a></span></p>
+        </div>
+      </article>
+
+      <br></br>
+
+      <!-- Article 6 -->
+      <article class="post">
+        <ul style="list-style-type: disc; margin-bottom: 3px; padding-left: 0;">
+          <li style="font-size: 18px;"><b>An Intelligent Modular Real-Time Vision-Based System for Environment Perception</b></li>
+        </ul>
+        <p style="opacity: 0.8; margin-bottom: 3px;"><strong>Amirhossein Kazerouni</strong>, Amirhossein Heydarian, Milad Soltany, Aida Mohammadshahi, Abbas Omidi, Saeed Ebadollahi</p>
+        <div>
+          <p style="margin-bottom: 3px;"><i class="fas fa-calendar-alt"></i> <strong>Conference:</strong> <span><b>NeurIPS 2022 Workshop on Machine Learning for Autonomous Driving</b></span></p>
+          <p style="margin-bottom: 3px;"><i class="far fa-file-alt"></i> <strong>Paper:</strong> <span> <a href="https://ml4ad.github.io/files/papers2022/An%20Intelligent%20Modular%20Real-Time%20Vision-Based%20System%20for%20Environment%20Perception.pdf" target="_blank">Download</a></span></p>
+          <p style="margin-bottom: -10px;"><i class="fab fa-github"></i> <strong>GitHub:</strong> <span> <a href="https://github.com/Pandas-Team/Autonomous-Vehicle-Environment-Perception" target="_blank">Link</a></span></p>
+        </div>
+      </article>
+
+      <br></br>
+
+      <!-- Article 8 -->
+      <article class="post">
+        <ul style="list-style-type: disc; margin-bottom: 3px; padding-left: 0;">
+          <li style="font-size: 18px;"><b>Ensemble Neural Representation Networks</b></li>
+        </ul>
+        <p style="opacity: 0.8; margin-bottom: 3px;">Milad Soltany*, Hesam Mojtahedi*, Hossein Entezari Zarch*, <strong>Amirhossein Kazerouni*</strong>, Alireza Morsali, Azra Abtahi, Farokh Marvasti</p>
+        <div>
+          <p style="margin-bottom: 3px;"><i class="fas fa-calendar-alt"></i> <strong>Conference:</strong> <span>arXiv</span></p>
+          <p style="margin-bottom: 3px;"><i class="far fa-file-alt"></i> <strong>Paper:</strong> <span> <a href="https://arxiv.org/abs/2110.04124" target="_blank">Download</a></span></p>
+          <p style="margin-bottom: -10px;"><i class="fab fa-github"></i> <strong>GitHub:</strong> <span> <a href="https://github.com/AlirezaMorsali/ENRP" target="_blank">Link</a></span></p>
+        </div>
+      </article>
+        
       </div>
-    </section> -->
-    <!-- End Testimonials Section -->
+    </section><!-- End Resume Section -->
 
-    <!-- ======= Contact Section ======= -->
-    <!-- <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-        </div>
-
-        <div class="row mt-1">
-
-          <div class="col-lg-4">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>info@example.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="col-lg-8 mt-5 mt-lg-0">
-
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-
-          </div>
-
-        </div>
-
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact section-bg">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contact</h2>
+        <p>For inquiries or feedback on my research, don't hesitate to reach out. I’m always happy to hear from you and exchange ideas.</p>
       </div>
-    </section> -->
-    <!-- End Contact Section -->
 
+      <div class="row" data-aos="fade-in">
+        <div class="col-lg-5 d-flex align-items-stretch">
+          <div class="info">
+            <!-- <div class="address">
+              <i class="bi bi-geo-alt"></i>
+              <h4>Location:</h4>
+              <p>A108 Adam Street, New York, NY 535022</p>
+            </div> -->
+            <div class="email">
+              <i class="bi bi-envelope"></i>
+              <h4>Email:</h4>
+              <p>amirhossein477@gmail.com.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Contact Section -->
+  
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
-      <h3>Amirhossein Kazerouni</h3>
-      <!-- <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p> -->
-      <div class="social-links">
-        <a href="mailto:amirhossein477@gmail.com" target="_blank" class="gmail"> <i class='bx bx-mail-send'></i></a>
-        <a href="https://github.com/amirhossein-kz" target="_blank" class="github"><i class='bx bxl-github'></i></a>
-        <a href="https://www.linkedin.com/in/amirhossein477/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-      </div>
       <div class="copyright">
-        &copy; Copyright <strong><span>MyResume</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>iPortfolio</span></strong>
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: [license-url] -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </footer><!-- End  Footer -->
 
-  <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
