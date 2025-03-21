@@ -213,41 +213,276 @@
   <div class="container is-max-desktop">
 
     
-    <!--/ Matting. -->
-
-    
-
-
     <!-- Concurrent Work. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">More</h2>
+        <h2 class="title is-3">Method Overview</h2>
 
         <div class="content has-text-justified">
-          <p>
-            Soon ...
-          </p>
+          <video width="100%" autoplay muted loop playsinline>
+            <source src="static/new.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </div>
-    <!--/ Concurrent Work. -->
 
   </div>
 </section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+  <div class="columns is-centered">
+    <div class="column is-full-width">
+      <h2 class="title is-3">LIFT: Experimental Results Across Large Datasets</h2>
+      <h2 class="title is-4">Performance on CelebA-HQ (64²) and ShapeNet (64³)</h2>
+
+      <div class="content has-text-justified">
+        <img src="static/results1.png" alt="Experimental Results" width="100%">
+        <p class="has-text-centered">
+          <em>Table: Performance comparison of image and voxel reconstruction and generation on CelebA-HQ (64²) and ShapeNet (64³). Each cell is color-coded to indicate the <span style="background-color:rgba(166,128,255,0.5); padding:2px;">best</span> and <span style="background-color:rgba(217,204,255,0.5); padding:2px;">second-best</span> performance. <i>Learn.</i> and <i>Inf.</i> refer to learnable and inference parameters, respectively.</em>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="columns is-centered">
+    <div class="column is-7">
+      <h2 class="title is-4">Performance on CIFAR-10 (32²)</h2>
+      <div class="content has-text-justified">
+        <img src="static/results2.png" alt="CIFAR-10 Classification Performance" width="100%">
+        <p class="has-text-centered">
+          <em>Table: Image classification performance on CIFAR-10. The table reports the Top-1 accuracy (in %) along with reconstruction performance across different numbers of augmentations. 
+          <span style="font-weight:bold;">★</span> denotes best classification results from Spatial Functa, while 
+          <span style="font-weight:bold;">★★</span> indicates the use of more sophisticated augmentations, including 
+          <a href="#mixup" style="color:#007bff; text-decoration:none;">MixUp</a> and 
+          <a href="#cutmix" style="color:#007bff; text-decoration:none;">CutMix</a>.</em>
+        </p>
+      </div>
+    </div>
+
+    <div class="column is-5">
+      <h2 class="title is-4">Performance on ImageNet-100 (256²)</h2>
+      <div class="content has-text-justified">
+        <img src="static/results3.png" alt="Additional CIFAR-10 Results" width="100%">
+        <p class="has-text-centered">
+          <em>Table: Image reconstruction performance on the ImageNet-100 dataset.</em>
+        </p>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    
+    <!-- Title for Experimental Results -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">ReLIFT: Experimental Results in Single-Data Settings</h2>
+        <p>
+          ReLIFT incorporates residual connections and expressive first-layer frequency scaling to mitigate the convergence-capacity gap often seen in INRs. These enhancements enable the model to capture finer details and represent a broader range of frequencies efficiently. The frequency scaling increases the network’s capacity to learn higher-frequency components, while the residual connections adjust layer weights to amplify higher-order harmonics while preserving fundamental components. This design allows ReLIFT to learn a balance between high and low-frequency information with greater efficiency.
+        </p>
+      </div>
+    </div>
+
+    
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <div class="content has-text-centered">
+          <img src="static/activations_relift.png" alt="ReLIFT Activations" width="90%">
+          <p><strong>(a) ReLIFT</strong></p>
+        </div>
+      </div>
+
+      <div class="column is-half">
+        <div class="content has-text-centered">
+          <img src="static/activations_siren.png" alt="SIREN Activations" width="98%">
+          <p><strong>(b) SIREN</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <p class="has-text-centered">
+          <em>Figure: Activation statistics comparison between ReLIFT and SIREN. </em>
+        </p>
+      </div>
+    </div>
+
+
+    
+    <!-- Image Representation -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Image Representation</h3>
+        <div class="content has-text-centered">
+          <img src="static/img_rep_0001.png" alt="Image Representation 1" width="86%">
+          <img src="static/img_rep_0010.png" alt="Image Representation 2" width="86%">
+          <img src="static/img_rep_0878.png" alt="Image Representation 3" width="86%">
+          <p><em>Figure: PSNR comparisons of ReLIFT with SOTA models.</em></p>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <!-- Audio Representation -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Audio Representation</h3>
+        <div class="content has-text-centered">
+          <style>
+            .audio-container {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-evenly;
+              align-items: center;
+              max-width: 800px;
+              margin: auto;
+            }
+            .audio-item {
+              text-align: center;
+              margin: 10px;
+            }
+            .audio-item audio {
+              border-radius: 50px; /* Makes the audio player rounded */
+              width: 200px; /* Adjust width */
+            }
+          </style>
+          
+          <div class="audio-container">
+            <!-- First Row (4 items) -->
+            <div class="audio-item">
+              <h5>Ground truth</h5>
+              <audio controls src="static/audio/gt_bach.wav"></audio>
+            </div>
+            <div class="audio-item">
+              <h5>ReLIFT</h5>
+              <audio controls src="static/audio/pred_relift_waveform.wav"></audio>
+            </div>
+            <div class="audio-item">
+              <h5>SIREN</h5>
+              <audio controls src="static/audio/pred_siren_waveform.wav"></audio>
+            </div>
+            <div class="audio-item">
+              <h5>Gauss</h5>
+              <audio controls src="static/audio/pred_gauss_waveform.wav"></audio>
+            </div>
+          
+            <!-- Second Row (3 items) -->
+            <div class="audio-item">
+              <h5>ReLU + P.E.</h5>
+              <audio controls src="static/audio/pred_relu_waveform.wav"></audio>
+            </div>
+            <div class="audio-item">
+              <h5>WIRE</h5>
+              <audio controls src="static/audio/pred_wire_waveform.wav"></audio>
+            </div>
+            <div class="audio-item">
+              <h5>FINER</h5>
+              <audio controls src="static/audio/pred_finer_waveform.wav"></audio>
+            </div>
+          </div>
+          
+          <br>
+          <img src="static/exp_audio.png" alt="Audio Representation" width="100%">
+
+          <p><em>Figure: PSNR and reconstruction error comparisons of ReLIFT with SOTA models.</em></p>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <!-- Shape Representation -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Shape Representation</h3>
+        <div class="content has-text-centered">
+          <img src="static/3d_sdf.png" alt="Shape Representation" width="100%">
+          <p><em>Figure: Qualitative comparisons of ReLIFT with SOTA models.</em></p>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <!-- Image Super-resolution -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Image Super-resolution</h3>
+        <div class="content has-text-centered">
+          <img src="static/img_sr_4x_sample.png" alt="Super-resolution" width="100%">
+          <p><em>Figure: PSNR and SSIM comparisons of a 4× single image super-resolution between ReLIFT and SOTA models.</em></p>
+        </div>
+      </div>
+    </div>
+      
+    <br>
+    
+    <!-- Image Denoising -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Image Denoising</h3>
+        <div class="content has-text-centered">
+          <img src="static/denoising_result.png" alt="Denoising Results" width="100%">
+          <p><em>Figure: PSNR and SSIM comparisons between ReLIFT and SOTA models.</em></p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <br>  
+    
+    <!-- Image Inpainting -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Image Inpainting</h3>
+        <div class="content has-text-centered">
+          <img src="static/inpainting_result.png" alt="Inpainting Results" width="100%">
+          <p><em>Figure: PSNR comparison between LIFT and SOTA models on 25% of the pixels in a 572 × 582 × 3 image.</em></p>
+        </div>
+      </div>
+    </div>
+    
+    <br> 
+
+   
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-4">ReLIFT Spectral Bias</h2>
+
+        <div class="content has-text-centered">
+          <img src="static/fr.png" alt="Spectral Bias Comparison" width="100%">
+          <p><em>Figure: Frequency learning comparison between SIREN and ReLIFT. The x-axis shows training steps, the y-axis indicates frequency, and the color represents relative approximation error.</em></p>
+        </div>
+      </div>
+    </div>
+
+      </div>
+    </section>
+    
+  </div>
+</section>
+
 
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{,
-  author    = {},
-  title     = {},
-  journal   = {},
-  year      = {},
+    <pre><code>@misc{,
+        author    = {Amirhossein Kazerouni and Soroush Mehraban and Michael Brudno and Babak Taati},
+        title     = {LIFT: Latent Implicit Functions for Task- and Data-Agnostic Encoding},
+        eprint   = {2503.15420},
+        year      = {2025},
+        url={https://arxiv.org/abs/2503.15420},
 }</code></pre>
   </div>
 </section>
-
 
 <footer class="footer">
   <div class="container">
