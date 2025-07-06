@@ -1013,3 +1013,19 @@ section {
     padding-right: 20px 15px;
   }
 }
+/* Publication layout */
+.publication-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.publication-entry:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.publication-image {
+  width: 150px;
+  flex-shrink: 0;
+  margin-bottom: 0;
+}
+
