@@ -1,0 +1,3 @@
+# Face2Scene source documents should stay local and not be pushed.
+face2scene/*.pdf
+face2scene/*.pptx

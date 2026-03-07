@@ -46,7 +46,14 @@
    */
   let navbarlinks = select('#navbar .scrollto', true)
   const navbarlinksActive = () => {
-    let position = window.scrollY + 200
+    const nearBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 2
+    if (nearBottom && navbarlinks.length) {
+      navbarlinks.forEach(link => link.classList.remove('active'))
+      navbarlinks[navbarlinks.length - 1].classList.add('active')
+      return
+    }
+
+    let position = window.scrollY + 120
     navbarlinks.forEach(navbarlink => {
       if (!navbarlink.hash) return
       let section = select(navbarlink.hash)

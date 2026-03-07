@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Face2Scene | CVPR 2026</title>
+  <meta name="description" content="Face2Scene: Using Facial Degradation as an Oracle for Diffusion-Based Scene Restoration.">
+  <meta name="keywords" content="Face2Scene, CVPR 2026, 3D reconstruction, generative models, face to scene">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/index.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="https://amirhossein-kz.github.io/">Amirhossein Kazerouni</a>
+      <nav class="top-nav">
+        <a href="#abstract">Abstract</a>
+        <a href="#method">Method</a>
+        <a href="#results">Results</a>
+        <a href="#citation">Citation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <p class="venue-pill">Accepted at CVPR 2026</p>
+        <h1><span class="hero-key">Face2Scene:</span> Using Facial Degradation as an Oracle for Diffusion-Based Scene Restoration</h1>
+        <p class="subtitle">
+          A two-stage framework that estimates degradation from a restored face and uses it to guide full-scene restoration.
+        </p>
+
+        <p class="authors">
+          <a href="https://amirhossein-kz.github.io/" target="_blank" rel="noopener noreferrer">Amirhossein Kazerouni</a><sup>1,2,3,4</sup>,
+          Maitreya Suin<sup>2</sup>, Tristan Ty Aumentado-Armstrong<sup>2</sup>, Sina Honari<sup>2</sup>,
+          Amanpreet Walia<sup>2</sup>, Iqbal Mohomed<sup>2</sup>, Konstantinos G. Derpanis<sup>2,5</sup>,
+          Babak Taati<sup>1,2,4</sup>, Alex Levinshtein<sup>2</sup>
+        </p>
+        <p class="affiliations">
+          <sup>1</sup>University of Toronto |
+          <sup>2</sup>Vector Institute |
+          <sup>3</sup>AI Center-Toronto, Samsung Electronics |
+          <sup>4</sup>University Health Network |
+          <sup>5</sup>York University
+        </p>
+        <p class="affiliations contact-line">
+          amirhossein@cs.toronto.ca
+        </p>
+
+        <div class="links">
+          <a class="btn primary" href="#" aria-disabled="true">Paper (Coming Soon)</a>
+          <a class="btn" href="#" aria-disabled="true">Code (Coming Soon)</a>
+          <a class="btn" href="#" aria-disabled="true">arXiv (Coming Soon)</a>
+          <a class="btn" href="https://huggingface.co/" target="_blank" rel="noopener noreferrer"><span class="hf-icon" aria-hidden="true">&#129303;</span> Hugging Face</a>
+        </div>
+
+        <div class="hero-media">
+          <img src="./static/media/teaser.png" alt="Face2Scene teaser" class="zoomable-image">
+        </div>
+      </div>
+    </section>
+
+    <section id="abstract" class="section">
+      <div class="container narrow">
+        <h2>Abstract</h2>
+        <p>
+          Recent advances in image restoration have enabled high-fidelity recovery of faces from degraded inputs using
+          reference-based face restoration models (Ref-FR). However, such methods focus solely on facial regions,
+          neglecting degradation across the full scene, including body and background, which limits practical
+          usability. Meanwhile, full-scene restorers often ignore degradation cues entirely, leading to underdetermined
+          predictions and visual artifacts. In this work, we propose <strong>Face2Scene</strong>, a two-stage
+          restoration framework that leverages the face as a perceptual oracle to estimate degradation and guide the
+          restoration of the entire image. Given a degraded image and one or more identity references, we first apply
+          a Ref-FR model to reconstruct high-quality facial details. From the restored-degraded face pair, we extract
+          a face-derived degradation code that captures degradation attributes (e.g., noise, blur, compression), which
+          is then transformed into multi-scale degradation-aware tokens. These tokens condition a diffusion model to
+          restore the full scene in a single step, including the body and background. Extensive experiments
+          demonstrate the superior effectiveness of the proposed method compared to state-of-the-art methods.
+        </p>
+      </div>
+    </section>
+
+    <section id="method" class="section alt">
+      <div class="container">
+        <h2>Method Overview</h2>
+        <figure class="method-figure">
+          <img src="./static/media/method-overview.png" alt="Face2Scene method overview" class="zoomable-image">
+          <figcaption>
+            Face2Scene pipeline: reference-guided face restoration, face-derived degradation extraction, and
+            degradation-aware one-step full-scene restoration.
+          </figcaption>
+        </figure>
+        <p class="section-note method-note">
+          Face2Scene first applies a reference-based face restoration model to recover identity-faithful facial details
+          from the degraded input. The restored-versus-degraded face pair is then encoded by FaDeX and transformed by
+          MapNet into multi-scale degradation-aware tokens, which condition a one-step diffusion restorer to recover
+          the full image, including face, body, clothing, and background.
+        </p>
+        <div class="cards">
+          <article class="card">
+            <h3>1. Stage 1: Ref-FR</h3>
+            <p>Restore a high-quality face from the degraded input using same-identity references.</p>
+          </article>
+          <article class="card">
+            <h3>2. FaDeX + MapNet</h3>
+            <p>Extract a face-derived degradation embedding and map it to multi-scale conditioning tokens.</p>
+          </article>
+          <article class="card">
+            <h3>3. One-Step Diffusion</h3>
+            <p>Condition a diffusion restorer to recover face, body, and background in one step.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="results" class="section">
+      <div class="container">
+        <h2>Qualitative Results</h2>
+        <p class="section-note results-intro">
+          Face2Scene consistently restores sharper facial identity cues and more coherent scene structure than prior
+          restoration baselines. The gallery below is a curated selection from Figures 11-20 of the paper; additional
+          qualitative comparisons remain available in the full PDF.
+        </p>
+        <div class="results-summary">
+          <h3>Performance Summary</h3>
+          <p>
+            Across the paper and accompanying slides, Face2Scene is the strongest overall method across perceptual,
+            fidelity, and quality metrics, while also producing more consistent restoration of the face, body, and
+            background in side-by-side qualitative comparisons.
+          </p>
+        </div>
+        <div class="result-group">
+          <div class="result-group-header">
+            <h3>Superior Performance Across Details: InScene Synthetic</h3>
+            <p>
+              Curated synthetic examples from Figures 11, 13, and 16. These comparisons evaluate Face2Scene against
+              S3Diff, InvSR, OSEDiff, PASD, SUPIR, and SinSR on the InScene synthetic benchmark.
+            </p>
+          </div>
+          <div class="result-grid">
+            <figure class="result-tile">
+              <img src="./static/media/qual-results-fig11.png" alt="Face2Scene qualitative comparison on InScene synthetic figure 11" class="zoomable-image">
+              <figcaption>Figure 11: Full-scene restoration on InScene synthetic samples with stronger face fidelity and scene consistency.</figcaption>
+            </figure>
+            <figure class="result-tile">
+              <img src="./static/media/qual-results-fig13.png" alt="Face2Scene qualitative comparison on InScene synthetic figure 13" class="zoomable-image">
+              <figcaption>Figure 13: Robust recovery under challenging degradation where scene-wide coherence matters beyond the face crop.</figcaption>
+            </figure>
+            <figure class="result-tile">
+              <img src="./static/media/qual-results-fig16.png" alt="Face2Scene qualitative comparison on InScene synthetic figure 16" class="zoomable-image">
+              <figcaption>Figure 16: Cleaner textures and more stable restoration across face, clothing, and background regions.</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="result-group">
+          <div class="result-group-header">
+            <h3>Superior Performance Across Details: Real Validation and Test</h3>
+            <p>
+              Curated real-world examples from Figures 17, 19, and 20. These figures show Face2Scene compared with
+              strong restoration baselines on real validation and real test samples.
+            </p>
+          </div>
+          <div class="result-grid">
+            <figure class="result-tile">
+              <img src="./static/media/qual-results-fig17.png" alt="Face2Scene qualitative comparison on real validation figure 17" class="zoomable-image">
+              <figcaption>Figure 17: Real validation comparisons showing improved facial realism and more coherent global restoration.</figcaption>
+            </figure>
+            <figure class="result-tile">
+              <img src="./static/media/qual-results-fig19.png" alt="Face2Scene qualitative comparison on real test figure 19" class="zoomable-image">
+              <figcaption>Figure 19: Real test samples compared against S3Diff, InvSR, OSEDiff, PASD, ResShift, SUPIR, and DiffBIR.</figcaption>
+            </figure>
+            <figure class="result-tile">
+              <img src="./static/media/qual-results-fig20.png" alt="Face2Scene qualitative comparison on real test figure 20" class="zoomable-image">
+              <figcaption>Figure 20: Additional real test examples highlighting stronger identity preservation and cleaner scene reconstruction.</figcaption>
+            </figure>
+          </div>
+        </div>
+        <p class="results-footnote">
+          Additional qualitative pages are available in Figures 12, 14, 15, and 18 of the paper.
+        </p>
+      </div>
+    </section>
+
+    <section id="citation" class="section alt">
+      <div class="container narrow">
+        <h2>Citation</h2>
+        <p>Update the BibTeX entry when the final metadata is available.</p>
+        <div class="code-wrap">
+<pre><code>@inproceedings{kazerouni2026face2scene,
+  title     = {Face2Scene: Using Facial Degradation as an Oracle for Diffusion-Based Scene Restoration},
+  author    = {Kazerouni, Amirhossein and Suin, Maitreya and Aumentado-Armstrong, Tristan Ty and Honari, Sina and Walia, Amanpreet and Mohomed, Iqbal and Derpanis, Konstantinos G. and Taati, Babak and Levinshtein, Alex},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year      = {2026}
+}</code></pre>
+          <button id="copyBibtex" class="copy-btn" type="button">Copy BibTeX</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>Face2Scene Project Page</p>
+      <a href="https://amirhossein-kz.github.io/" target="_blank" rel="noopener noreferrer">Back to Personal Website</a>
+    </div>
+  </footer>
+
+  <div class="image-lightbox" id="imageLightbox" hidden>
+    <div class="lightbox-toolbar">
+      <button class="lightbox-action" id="lightboxZoomOut" type="button" aria-label="Zoom out image">-</button>
+      <button class="lightbox-action" id="lightboxZoomReset" type="button" aria-label="Reset image zoom">100%</button>
+      <button class="lightbox-action" id="lightboxZoomIn" type="button" aria-label="Zoom in image">+</button>
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close fullscreen image">Close</button>
+    </div>
+    <div class="lightbox-stage" id="lightboxStage">
+      <img id="lightboxImage" src="" alt="">
+    </div>
+  </div>
+
+  <script src="./static/js/index.js"></script>
+</body>
+</html>
