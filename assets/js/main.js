@@ -262,6 +262,45 @@
   });
 
   /**
+   * Add publication abstract toggles on the homepage.
+   * Face2Scene already has a real embedded abstract; others get a paper-link fallback.
+   */
+  const publicationCards = select('#publications .post', true)
+  publicationCards.forEach((card) => {
+    if (card.querySelector('.pub-abstract')) return
+
+    const content = card.querySelector('.pub-content')
+    if (!content) return
+
+    const paperLink = [...card.querySelectorAll('.pub-link a')].find((link) =>
+      /paper/i.test(link.textContent || '')
+    )
+
+    const details = document.createElement('details')
+    details.className = 'pub-abstract'
+
+    const summary = document.createElement('summary')
+    summary.className = 'pub-abstract-toggle'
+    summary.setAttribute('aria-label', 'Show abstract')
+    summary.innerHTML = '<i class="fas fa-chevron-down"></i>'
+
+    const body = document.createElement('div')
+    body.className = 'pub-abstract-body'
+
+    const paragraph = document.createElement('p')
+    if (paperLink) {
+      paragraph.innerHTML = `Abstract preview is not embedded on the homepage. Use the <a href="${paperLink.href}" target="_blank" rel="noopener noreferrer">Paper</a> link above to read the full abstract.`
+    } else {
+      paragraph.textContent = 'Abstract preview is not embedded on the homepage for this publication.'
+    }
+
+    body.appendChild(paragraph)
+    details.appendChild(summary)
+    details.appendChild(body)
+    content.appendChild(details)
+  })
+
+  /**
    * Initiate Pure Counter 
    */
   new PureCounter();
