@@ -8,7 +8,18 @@
   <title>Amirhossein Kazerouni</title>
   <meta name="description" content="Amirhossein Kazerouni's portfolio, showcasing research on generative models, 3D reconstruction, and publications.">
   <meta name="keywords" content="Amirhossein Kazerouni, generative models, 3D reconstruction, deep learning, research, portfolio">
-  
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#dce5f0" id="theme-color-meta">
+  <link rel="canonical" href="https://amirhossein-kz.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Amirhossein Kazerouni">
+  <meta property="og:description" content="Ph.D. researcher working at the intersection of generative models, 3D reconstruction, and medical imaging.">
+  <meta property="og:url" content="https://amirhossein-kz.github.io/">
+  <meta property="og:image" content="https://amirhossein-kz.github.io/assets/img/profile-img.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Amirhossein Kazerouni">
+  <meta name="twitter:description" content="Research portfolio, news, and publications by Amirhossein Kazerouni.">
+  <meta name="twitter:image" content="https://amirhossein-kz.github.io/assets/img/profile-img.jpg">
 
   <!-- Favicons -->
   <link href="assets/img/AH.png" rel="icon">
@@ -23,11 +34,37 @@
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/homepage.css" rel="stylesheet">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Amirhossein Kazerouni",
+      "url": "https://amirhossein-kz.github.io/",
+      "image": "https://amirhossein-kz.github.io/assets/img/profile-img.jpg",
+      "jobTitle": "Ph.D. Researcher",
+      "affiliation": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Toronto"
+        },
+        {
+          "@type": "Organization",
+          "name": "Vector Institute"
+        }
+      ],
+      "sameAs": [
+        "https://github.com/amirhossein-kz",
+        "https://www.linkedin.com/in/amirhossein477/",
+        "https://scholar.google.com/citations?hl=en&user=aKDCc3MAAAAJ"
+      ]
+    }
+  </script>
 
   <!-- =======================================================
   * Template Name: iPortfolio
@@ -41,7 +78,9 @@
 <body>
 
   <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+  <button type="button" class="mobile-nav-toggle d-xl-none" aria-label="Open navigation" aria-controls="navbar" aria-expanded="false">
+    <i class="bi bi-list" aria-hidden="true"></i>
+  </button>
 
   <!-- ======= Header ======= -->
   <header id="header">
@@ -49,16 +88,20 @@
 
       <div class="profile">
         <img src="assets/img/profile-img.jpg" alt="Amirhossein Kazerouni" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Amirhossein <br> Kazerouni</a></h1>
+        <h1><a href="index.html">Amirhossein <br> Kazerouni</a></h1>
+        <button type="button" class="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false">
+          <i class="bi bi-moon-stars" aria-hidden="true"></i>
+          <span>Dark mode</span>
+        </button>
         <div class="social-links mt-3 text-center">
           <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
-          <a href="mailto:amirhossein477@gmail.com" class="gmail"> <i class='bx bx-mail-send'></i></a>
-          <a href="https://github.com/amirhossein-kz" class="github"><i class='bx bxl-github'></i></a>
+          <a href="mailto:amirhossein477@gmail.com" class="gmail" aria-label="Send email to Amirhossein Kazerouni"><i class='bx bx-mail-send' aria-hidden="true"></i></a>
+          <a href="https://github.com/amirhossein-kz" class="github" target="_blank" rel="noopener noreferrer" aria-label="Open Amirhossein Kazerouni GitHub profile"><i class='bx bxl-github' aria-hidden="true"></i></a>
           <!-- <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> -->
           <!-- <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> -->
           <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
-          <a href="https://www.linkedin.com/in/amirhossein477/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://scholar.google.com/citations?hl=en&user=aKDCc3MAAAAJ" class="google-scholar"><i class="bx bxs-graduation"></i></a>
+          <a href="https://www.linkedin.com/in/amirhossein477/" class="linkedin" target="_blank" rel="noopener noreferrer" aria-label="Open Amirhossein Kazerouni LinkedIn profile"><i class="bx bxl-linkedin" aria-hidden="true"></i></a>
+          <a href="https://scholar.google.com/citations?hl=en&user=aKDCc3MAAAAJ" class="google-scholar" target="_blank" rel="noopener noreferrer" aria-label="Open Amirhossein Kazerouni Google Scholar profile"><i class="bx bxs-graduation" aria-hidden="true"></i></a>
         </div>
       </div>
 
@@ -90,44 +133,40 @@
 
         <div class="section-title">
           <h2>About</h2>
+        </div>
+
+        <div class="about-copy" data-aos="fade-up">
           <p>
-            I am a <strong>Ph.D. student in Computer Science</strong> at the 
-            <a href="https://www.utoronto.ca/" target="_blank" rel="noopener noreferrer">University of Toronto</a>, 
-            working under the supervision of 
-            <a href="https://brudno.uhndata.io/" target="_blank" rel="noopener noreferrer">Michael Brudno</a> 
-            and <a href="https://www.cs.toronto.edu/~taati/" target="_blank" rel="noopener noreferrer">Babak Taati</a>. 
+            I am a <strong>Ph.D. student in Computer Science</strong> at the
+            <a href="https://www.utoronto.ca/" target="_blank" rel="noopener noreferrer">University of Toronto</a>,
+            working under the supervision of
+            <a href="https://brudno.uhndata.io/" target="_blank" rel="noopener noreferrer">Michael Brudno</a>
+            and <a href="https://www.cs.toronto.edu/~taati/" target="_blank" rel="noopener noreferrer">Babak Taati</a>.
             I am also a graduate researcher at the <strong>Vector Institute</strong>.
-        </p>
-        <br>
-        <p>
-            My research explores the synergy between <strong>generative models and 3D reconstruction</strong>, 
+          </p>
+          <p>
+            My research explores the synergy between <strong>generative models and 3D reconstruction</strong>,
             focusing on 3D data generation, representation, and editing.
-        </p>
-        <br>
-        <p>
+          </p>
+          <p>
             During my internship at <strong>Samsung AI Centre Toronto</strong>, I work under the mentorship of
             <a href="https://scholar.google.com/citations?hl=en&user=7EFMKWUAAAAJ" target="_blank" rel="noopener noreferrer">Alex Levinshtein</a>,
             <a href="https://scholar.google.ca/citations?hl=en&oi=ao&user=naUR8f0AAAAJ" target="_blank" rel="noopener noreferrer">Iqbal Mohomed</a>, and
             <a href="https://scholar.google.ca/citations?hl=en&user=3Br8x_gAAAAJ" target="_blank" rel="noopener noreferrer">Konstantinos G. Derpanis</a>.
-        </p>
-        <br>
-        <p>
-            I hold a <strong>Bachelor of Science in Electrical Engineering</strong> from the 
-            <a href="https://www.iust.ac.ir/" target="_blank" rel="noopener noreferrer">Iran University of Science and Technology</a>. I am always eager to discuss research ideas and collaborate on exciting projects. 
-            Feel free to reach out!
-        </p>
-        <br>
-        
-        <p>
-            📄 
-            <a href="assets/AmirhosseinKazerouni_CV.pdf" target="_blank" rel="noopener noreferrer">[My CV]</a>
-        </p>
-                </div>
+          </p>
+          <p>
+            I hold a <strong>Bachelor of Science in Electrical Engineering</strong> from the
+            <a href="https://www.iust.ac.ir/" target="_blank" rel="noopener noreferrer">Iran University of Science and Technology</a>.
+            I am always eager to discuss research ideas and collaborate on exciting projects. Feel free to reach out.
+          </p>
+          <p class="about-actions">
+            <a href="assets/AmirhosseinKazerouni_CV.pdf" class="cv-link" target="_blank" rel="noopener noreferrer">View CV</a>
+          </p>
+        </div>
 
 
         <div class="col-lg-12 pt-4 pt-lg-0 content" data-aos="fade-left">
           <h3>Experience</h3>
-          <br>
           <div class="experience-list">
             <div class="experience-item">
               <div class="experience-main">
@@ -216,85 +255,85 @@
               <li>
                 <article class="news-card">
                   <p class="news-date">Jul. 2025</p>
-                  <p class="news-copy">🎉 Paper <a href="https://amirhossein-kz.github.io/lift/" class="link-accent">LIFT</a> accepted at <a href="https://iccv.thecvf.com/">ICCV'25</a>.</p>
+                  <p class="news-copy">Paper <a href="https://amirhossein-kz.github.io/lift/" class="link-accent">LIFT</a> accepted at <a href="https://iccv.thecvf.com/">ICCV'25</a>.</p>
                 </article>
               </li>
               <li>
                 <article class="news-card">
                   <p class="news-date">May 2025</p>
-                  <p class="news-copy">🪐 Started my research internship at Samsung Research America (SRA).</p>
+                  <p class="news-copy">Started my research internship at Samsung Research America (SRA).</p>
                 </article>
               </li>
               <li>
                 <article class="news-card">
                   <p class="news-date">Jan. 2025</p>
-                  <p class="news-copy">🎉 One paper, <a href="https://arhosseini77.github.io/sum_page/" class="link-accent">SUM</a>, accepted as an <strong>oral presentation</strong> at <a href="https://wacv2025.thecvf.com/">WACV'25</a>.</p>
+                  <p class="news-copy">One paper, <a href="https://arhosseini77.github.io/sum_page/" class="link-accent">SUM</a>, accepted as an <strong>oral presentation</strong> at <a href="https://wacv2025.thecvf.com/">WACV'25</a>.</p>
                 </article>
               </li>
               <li>
                 <article class="news-card">
                   <p class="news-date">Feb. 2024</p>
-                  <p class="news-copy">🎉 Paper <a href="https://arxiv.org/abs/2311.13069" class="link-accent">FuseNet</a> accepted at <a href="https://biomedicalimaging.org/2024/">ISBI'24</a>.</p>
+                  <p class="news-copy">Paper <a href="https://arxiv.org/abs/2311.13069" class="link-accent">FuseNet</a> accepted at <a href="https://biomedicalimaging.org/2024/">ISBI'24</a>.</p>
                 </article>
               </li>
               <li>
                 <article class="news-card">
                   <p class="news-date">Jan. 2024</p>
-                  <p class="news-copy">🎓 Started my Ph.D. in Computer Science at the <a href="https://www.utoronto.ca/" class="link-accent">University of Toronto</a>.</p>
+                  <p class="news-copy">Started my Ph.D. in Computer Science at the <a href="https://www.utoronto.ca/" class="link-accent">University of Toronto</a>.</p>
                 </article>
               </li>
               <li>
                 <article class="news-card">
                   <p class="news-date">Oct. 2023</p>
-                  <p class="news-copy">🎉 Two papers, <a href="https://arxiv.org/abs/2310.18846" class="link-accent">INCODE</a> and <a href="https://arxiv.org/abs/2309.00121" class="link-accent">D-LKA Net</a>, accepted at <a href="https://wacv2024.thecvf.com/">WACV'24</a>.</p>
+                  <p class="news-copy">Two papers, <a href="https://arxiv.org/abs/2310.18846" class="link-accent">INCODE</a> and <a href="https://arxiv.org/abs/2309.00121" class="link-accent">D-LKA Net</a>, accepted at <a href="https://wacv2024.thecvf.com/">WACV'24</a>.</p>
                 </article>
               </li>
               <li>
                 <article class="news-card">
                   <p class="news-date">Oct. 2023</p>
-                  <p class="news-copy">🎉 Our <strong>survey paper</strong> on <a href="https://arxiv.org/abs/2301.03505" class="link-accent">Vision Transformers in Medical Imaging</a> accepted in the <a href="https://www.sciencedirect.com/journal/medical-image-analysis">Medical Image Analysis Journal</a>.</p>
+                  <p class="news-copy">Our <strong>survey paper</strong> on <a href="https://arxiv.org/abs/2301.03505" class="link-accent">Vision Transformers in Medical Imaging</a> accepted in the <a href="https://www.sciencedirect.com/journal/medical-image-analysis">Medical Image Analysis Journal</a>.</p>
                 </article>
               </li>
               <li>
                 <article class="news-card">
                   <p class="news-date">Aug. 2023</p>
-                  <p class="news-copy">🎉 One main paper, <a href="https://arxiv.org/pdf/2309.00108" class="link-accent">LaplacianFormer</a>, and three workshop papers, <a href="https://arxiv.org/pdf/2308.02959" class="link-accent">DermoSegDiff</a>, <a href="https://arxiv.org/pdf/2308.13442" class="link-accent">WaveFormer</a>, and <a href="https://arxiv.org/pdf/2212.13504" class="link-accent">DAE-Former</a>, accepted at <a href="https://conferences.miccai.org/2023/en/">MICCAI'23</a>.</p>
+                  <p class="news-copy">One main paper, <a href="https://arxiv.org/pdf/2309.00108" class="link-accent">LaplacianFormer</a>, and three workshop papers, <a href="https://arxiv.org/pdf/2308.02959" class="link-accent">DermoSegDiff</a>, <a href="https://arxiv.org/pdf/2308.13442" class="link-accent">WaveFormer</a>, and <a href="https://arxiv.org/pdf/2212.13504" class="link-accent">DAE-Former</a>, accepted at <a href="https://conferences.miccai.org/2023/en/">MICCAI'23</a>.</p>
                 </article>
               </li>
               <li>
                 <article class="news-card">
                   <p class="news-date">Aug. 2023</p>
-                  <p class="news-copy">🎉 Two papers, <a href="https://openaccess.thecvf.com/content/ICCV2023W/CVAMD/html/Karimijafarbigloo_Self-Supervised_Semantic_Segmentation_Consistency_over_Transformation_ICCVW_2023_paper.html" class="link-accent">S<sup>3</sup>-Net</a> and <a href="https://arxiv.org/abs/2307.16142" class="link-accent">INR Survey in Medical Imaging</a>, accepted at <a href="https://cvamd2023.github.io/">ICCV'23 CVAMD Workshop</a>.</p>
+                  <p class="news-copy">Two papers, <a href="https://openaccess.thecvf.com/content/ICCV2023W/CVAMD/html/Karimijafarbigloo_Self-Supervised_Semantic_Segmentation_Consistency_over_Transformation_ICCVW_2023_paper.html" class="link-accent">S<sup>3</sup>-Net</a> and <a href="https://arxiv.org/abs/2307.16142" class="link-accent">INR Survey in Medical Imaging</a>, accepted at <a href="https://cvamd2023.github.io/">ICCV'23 CVAMD Workshop</a>.</p>
                 </article>
               </li>
               <li>
                 <article class="news-card">
                   <p class="news-date">Apr. 2023</p>
-                  <p class="news-copy">🎉 Two papers, <a href="https://openreview.net/forum?id=pp2raGSU3Wx" class="link-accent">MS-Former</a> and <a href="https://openreview.net/forum?id=PD0ASSmvlE" class="link-accent">MMCFormer</a>, accepted for <strong>oral presentations</strong> at <a href="https://2023.midl.io/">MIDL'23</a>.</p>
+                  <p class="news-copy">Two papers, <a href="https://openreview.net/forum?id=pp2raGSU3Wx" class="link-accent">MS-Former</a> and <a href="https://openreview.net/forum?id=PD0ASSmvlE" class="link-accent">MMCFormer</a>, accepted for <strong>oral presentations</strong> at <a href="https://2023.midl.io/">MIDL'23</a>.</p>
                 </article>
               </li>
               <li>
                 <article class="news-card">
                   <p class="news-date">Oct. 2022</p>
-                  <p class="news-copy">🎉 Paper <a href="https://openaccess.thecvf.com/content/WACV2023/html/Heidari_HiFormer_Hierarchical_Multi-Scale_Representations_Using_Transformers_for_Medical_Image_Segmentation_WACV_2023_paper.html" class="link-accent">HiFormer</a> on medical image segmentation accepted at <a href="https://wacv2023.thecvf.com/home">WACV’23</a>.</p>
+                  <p class="news-copy">Paper <a href="https://openaccess.thecvf.com/content/WACV2023/html/Heidari_HiFormer_Hierarchical_Multi-Scale_Representations_Using_Transformers_for_Medical_Image_Segmentation_WACV_2023_paper.html" class="link-accent">HiFormer</a> on medical image segmentation accepted at <a href="https://wacv2023.thecvf.com/home">WACV'23</a>.</p>
                 </article>
               </li>
               <li>
                 <article class="news-card">
                   <p class="news-date">Oct. 2022</p>
-                  <p class="news-copy">🎉 Paper on a <strong>real-time vision-based environment perception system</strong> accepted at a <a href="https://nips.cc/virtual/2022/workshop/49981">NeurIPS'22 Workshop</a>.</p>
+                  <p class="news-copy">Paper on a <strong>real-time vision-based environment perception system</strong> accepted at a <a href="https://nips.cc/virtual/2022/workshop/49981">NeurIPS'22 Workshop</a>.</p>
                 </article>
               </li>
               <li>
                 <article class="news-card">
                   <p class="news-date">Aug. 2022</p>
-                  <p class="news-copy">🎉 Our <strong>survey paper</strong> on <a href="https://arxiv.org/abs/2211.07804" class="link-accent">Diffusion Models in Medical Imaging</a> accepted in the <a href="https://www.sciencedirect.com/journal/medical-image-analysis">Medical Image Analysis Journal</a>.</p>
+                  <p class="news-copy">Our <strong>survey paper</strong> on <a href="https://arxiv.org/abs/2211.07804" class="link-accent">Diffusion Models in Medical Imaging</a> accepted in the <a href="https://www.sciencedirect.com/journal/medical-image-analysis">Medical Image Analysis Journal</a>.</p>
                 </article>
               </li>
               <li>
                 <article class="news-card">
                   <p class="news-date">Sep. 2021</p>
-                  <p class="news-copy">🎓 Successfully defended my <strong>bachelor's thesis</strong> on designing, simulating, and building a <strong>self-driving car</strong>.</p>
+                  <p class="news-copy">Successfully defended my <strong>bachelor's thesis</strong> on designing, simulating, and building a <strong>self-driving car</strong>.</p>
                 </article>
               </li>
             </ul>
@@ -310,7 +349,18 @@
 
         <div class="section-title">
           <h2>Publications</h2>
+          <p>Browse the full list by year, then open individual abstracts, papers, code, and teaser visuals.</p>
         </div>
+
+        <div class="publications-toolbar" role="toolbar" aria-label="Filter publications by year">
+          <button type="button" class="pub-filter is-active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="pub-filter" data-filter="2026" aria-pressed="false">2026</button>
+          <button type="button" class="pub-filter" data-filter="2025" aria-pressed="false">2025</button>
+          <button type="button" class="pub-filter" data-filter="2024" aria-pressed="false">2024</button>
+          <button type="button" class="pub-filter" data-filter="2023" aria-pressed="false">2023</button>
+          <button type="button" class="pub-filter" data-filter="2022" aria-pressed="false">2022</button>
+        </div>
+        <p class="publication-status" aria-live="polite">Showing all publications.</p>
 
         <article class="post d-flex align-items-center mb-3">
           <div class="me-3 flex-shrink-0 position-relative pub-media">
@@ -319,9 +369,7 @@
           </div>
 
           <div class="pub-content">
-            <p class="pub-title">
-              Face2Scene: Using Facial Degradation as an Oracle for Diffusion-Based Scene Restoration
-            </p>
+            <h3 class="pub-title">Face2Scene: Using Facial Degradation as an Oracle for Diffusion-Based Scene Restoration</h3>
             <p class="pub-authors">
               <strong>Amirhossein Kazerouni</strong>, Maitreya Suin, Tristan Ty Aumentado-Armstrong, Sina Honari,
               Amanpreet Walia, Iqbal Mohomed, Konstantinos G. Derpanis, Babak Taati, Alex Levinshtein
@@ -362,9 +410,6 @@
             </details>
           </div>
         </article>
-
-      <br>
-
         <!-- Article -5 with image on the left and bullet removed -->
         <article class="post d-flex align-items-center mb-3">
           <!-- Video teaser on the left -->
@@ -376,9 +421,7 @@
         
           <!-- Text on the right with padding -->
           <div class="pub-content">
-            <p class="pub-title">
-              LIFT: Latent Implicit Functions for Task- and Data-Agnostic Encoding
-            </p>
+            <h3 class="pub-title">LIFT: Latent Implicit Functions for Task- and Data-Agnostic Encoding</h3>
             <p class="pub-authors">
               <strong>Amirhossein Kazerouni</strong>, Soroush Mehraban, Michael Brudno, Babak Taati
             </p>
@@ -412,9 +455,6 @@
             </details>
           </div>
         </article>
-        
-      <br>
-
         <!-- Article -5 with image on the left and bullet removed -->
       <article class="post d-flex align-items-center mb-3">
         <!-- Image on the left -->
@@ -426,9 +466,7 @@
 
         <!-- Text on the right with padding -->
         <div class="pub-content">
-          <p class="pub-title">
-            MedScale-Former: Self-guided multiscale transformer for medical image segmentation
-          </p>
+          <h3 class="pub-title">MedScale-Former: Self-guided multiscale transformer for medical image segmentation</h3>
           <p class="pub-authors">
             Sanaz Karimijafarbigloo, Reza Azad, <b>Amirhossein Kazerouni</b>, Dorit Merhof
           </p>
@@ -456,9 +494,6 @@
           </details>
         </div>
       </article>
-
-      <br>
-
       <!-- Article -5 with image on the left and bullet removed -->
       <article class="post d-flex align-items-center mb-3">
         <!-- Image on the left -->
@@ -470,9 +505,7 @@
 
         <!-- Text on the right with padding -->
         <div class="pub-content">
-          <p class="pub-title">
-            SUM: Saliency Unification through Mamba for Visual Attention Modeling
-          </p>
+          <h3 class="pub-title">SUM: Saliency Unification through Mamba for Visual Attention Modeling</h3>
           <p class="pub-authors">
             Alireza Hosseini*, <b>Amirhossein Kazerouni*</b>, Saeed Akhavan, Michael Brudno, Babak Taati
           </p>
@@ -512,9 +545,6 @@
           </details>
         </div>
       </article>
-
-      <br>
-
       <!-- Article - FuseNet with image on the left and bullet removed -->
       <article class="post d-flex align-items-center mb-3">
         <!-- Image on the left -->
@@ -526,9 +556,7 @@
 
         <!-- Text on the right with padding -->
         <div class="pub-content">
-          <p class="pub-title">
-            FuseNet: Self-Supervised Dual-Path Network for Medical Image Segmentation
-          </p>
+          <h3 class="pub-title">FuseNet: Self-Supervised Dual-Path Network for Medical Image Segmentation</h3>
           <p class="pub-authors">
             <b>Amirhossein Kazerouni</b>, Sanaz Karimijafarbigloo, Reza Azad, Yury Velichko, Ulas Bagci, Dorit Merhof
           </p>
@@ -562,10 +590,6 @@
           </details>
         </div>
       </article>
-
-
-      <br>
-
       <!-- Article - INCODE with image on the left and bullet removed -->
       <article class="post d-flex align-items-center mb-3">
         <!-- Image on the left -->
@@ -577,9 +601,7 @@
 
         <!-- Text on the right with padding -->
         <div class="pub-content">
-          <p class="pub-title">
-            INCODE: Implicit Neural Conditioning with Prior Knowledge Embeddings
-          </p>
+          <h3 class="pub-title">INCODE: Implicit Neural Conditioning with Prior Knowledge Embeddings</h3>
           <p class="pub-authors">
             <b>Amirhossein Kazerouni</b>, Reza Azad, Alireza Hosseini, Dorit Merhof, Ulas Bagci
           </p>
@@ -619,10 +641,6 @@
           </details>
         </div>
       </article>
-
-
-      <br>
-
       <!-- Article - Beyond Self-Attention with image on the left and bullet removed -->
       <article class="post d-flex align-items-center mb-3">
         <!-- Image on the left -->
@@ -634,9 +652,7 @@
 
         <!-- Text on the right with padding -->
         <div class="pub-content">
-          <p class="pub-title">
-            Beyond Self-Attention: Deformable Large Kernel Attention for Medical Image Segmentation
-          </p>
+          <h3 class="pub-title">Beyond Self-Attention: Deformable Large Kernel Attention for Medical Image Segmentation</h3>
           <p class="pub-authors">
             Reza Azad, Leon Niggemeier, Michael Huttemann, <b>Amirhossein Kazerouni</b>, Ehsan Khodapanah Aghdam, Yury Velichko, Ulas Bagci, Dorit Merhof
           </p>
@@ -670,10 +686,6 @@
           </details>
         </div>
       </article>
-
-
-      <br>
-
       <!-- Article - Laplacian-Former with image on the left and bullet removed -->
       <article class="post d-flex align-items-center mb-3">
         <!-- Image on the left -->
@@ -685,9 +697,7 @@
 
         <!-- Text on the right with padding -->
         <div class="pub-content">
-          <p class="pub-title">
-            Laplacian-Former: Overcoming the Limitations of Vision Transformers in Local Texture Detection
-          </p>
+          <h3 class="pub-title">Laplacian-Former: Overcoming the Limitations of Vision Transformers in Local Texture Detection</h3>
           <p class="pub-authors">
             Reza Azad, <b>Amirhossein Kazerouni</b>, Babak Azad, Ehsan Khodapanah Aghdam, Yury Velichko, Ulas Bagci, Dorit Merhof
           </p>
@@ -721,10 +731,6 @@
           </details>
         </div>
       </article>
-
-  
-      <br>
-
       <!-- Article - WaveFormer with image on the left and bullet removed -->
       <article class="post d-flex align-items-center mb-3">
         <!-- Image on the left -->
@@ -736,9 +742,7 @@
 
         <!-- Text on the right with padding -->
         <div class="pub-content">
-          <p class="pub-title">
-            Unlocking Fine-Grained Details with Wavelet-based High-Frequency Enhancement in Transformers
-          </p>
+          <h3 class="pub-title">Unlocking Fine-Grained Details with Wavelet-based High-Frequency Enhancement in Transformers</h3>
           <p class="pub-authors">
             Reza Azad, <b>Amirhossein Kazerouni</b>, Alaa Sulaiman, Afshin Bozorgpour, Ehsan Khodapanah Aghdam, Abin Jose, Dorit Merhof
           </p>
@@ -772,10 +776,6 @@
           </details>
         </div>
       </article>
-
-  
-      <br>
-
       <!-- Article - DermoSegDiff with image on the left and bullet removed -->
       <article class="post d-flex align-items-center mb-3">
         <!-- Image on the left -->
@@ -787,9 +787,7 @@
 
         <!-- Text on the right with padding -->
         <div class="pub-content">
-          <p class="pub-title">
-            DermoSegDiff: A Boundary-aware Segmentation Diffusion Model for Skin Lesion Delineation
-          </p>
+          <h3 class="pub-title">DermoSegDiff: A Boundary-aware Segmentation Diffusion Model for Skin Lesion Delineation</h3>
           <p class="pub-authors">
             Afshin Bozorgpour*, Yousef Sadegheih*, <b>Amirhossein Kazerouni*</b>, Reza Azad, Dorit Merhof
           </p>
@@ -823,10 +821,6 @@
           </details>
         </div>
       </article>
-
-
-      <br>
-
       <!-- Article - SSCT with image on the left and bullet removed -->
       <article class="post d-flex align-items-center mb-3">
         <!-- Image on the left -->
@@ -838,9 +832,7 @@
 
         <!-- Text on the right with padding -->
         <div class="pub-content">
-          <p class="pub-title">
-            Self-supervised Semantic Segmentation: Consistency over Transformation
-          </p>
+          <h3 class="pub-title">Self-supervised Semantic Segmentation: Consistency over Transformation</h3>
           <p class="pub-authors">
             Sanaz Karimijafarbigloo, Reza Azad, <b>Amirhossein Kazerouni</b>, Yury Velichko, Ulas Bagci, Dorit Merhof
           </p>
@@ -874,9 +866,6 @@
           </details>
         </div>
       </article>
-
-      <br>
-
       <!-- Article - INR Survey with image on the left and bullet removed -->
       <article class="post d-flex align-items-center mb-3">
         <!-- Image on the left -->
@@ -888,9 +877,7 @@
 
         <!-- Text on the right with padding -->
         <div class="pub-content">
-          <p class="pub-title">
-            Implicit Neural Representation in Medical Imaging: A Comparative Survey
-          </p>
+          <h3 class="pub-title">Implicit Neural Representation in Medical Imaging: A Comparative Survey</h3>
           <p class="pub-authors">
             Amirali Molaei, Amirhossein Aminimehr, Armin Tavakoli, <b>Amirhossein Kazerouni</b>, Bobby Azad, Reza Azad, Dorit Merhof
           </p>
@@ -924,11 +911,6 @@
           </details>
         </div>
       </article>
-
-
-      <br>
-
-
       <!-- Article - Diffusion Models Survey with image on the left and bullet removed -->
       <article class="post d-flex align-items-center mb-3">
         <!-- Image on the left -->
@@ -940,9 +922,7 @@
 
         <!-- Text on the right with padding -->
         <div class="pub-content">
-          <p class="pub-title">
-            Diffusion Models in Medical Imaging: A Comprehensive Survey
-          </p>
+          <h3 class="pub-title">Diffusion Models in Medical Imaging: A Comprehensive Survey</h3>
           <p class="pub-authors">
             <b>Amirhossein Kazerouni</b>, Ehsan Khodapanah Aghdam, Moein Heidari, Reza Azad, Mohsen Fayyaz, Ilker Hacihaliloglu, Dorit Merhof
           </p>
@@ -976,10 +956,6 @@
           </details>
         </div>
       </article>
-
-
-      <br>
-
       <!-- Article - Vision Transformers Survey with image on the left and bullet removed -->
       <article class="post d-flex align-items-center mb-3">
         <!-- Image on the left -->
@@ -991,9 +967,7 @@
 
         <!-- Text on the right with padding -->
         <div class="pub-content">
-          <p class="pub-title">
-            Advances in Medical Image Analysis with Vision Transformers: A Comprehensive Review
-          </p>
+          <h3 class="pub-title">Advances in Medical Image Analysis with Vision Transformers: A Comprehensive Review</h3>
           <p class="pub-authors">
             Reza Azad, <b>Amirhossein Kazerouni</b>, Moein Heidari, Ehsan Khodapanah Aghdam, Amirali Molaei, Yiwei Jia, Abin Jose, Rijo Roy, Dorit Merhof
           </p>
@@ -1027,10 +1001,6 @@
           </details>
         </div>
       </article>
-
-
-      <br>
-
       <!-- Article - DAE-Former with image on the left and bullet removed -->
       <article class="post d-flex align-items-center mb-3">
         <!-- Image on the left -->
@@ -1042,9 +1012,7 @@
 
         <!-- Text on the right with padding -->
         <div class="pub-content">
-          <p class="pub-title">
-            DAE-Former: Dual Attention-guided Efficient Transformer for Medical Image Segmentation
-          </p>
+          <h3 class="pub-title">DAE-Former: Dual Attention-guided Efficient Transformer for Medical Image Segmentation</h3>
           <p class="pub-authors">
             Reza Azad, René Arimond, Ehsan Khodapanah Aghdam, <b>Amirhossein Kazerouni</b>, Dorit Merhof
           </p>
@@ -1078,10 +1046,6 @@
           </details>
         </div>
       </article>
-
-
-      <br>
-
       <!-- Article - MS-Former with image on the left and bullet removed -->
       <article class="post d-flex align-items-center mb-3">
         <!-- Image on the left -->
@@ -1093,9 +1057,7 @@
 
         <!-- Text on the right with padding -->
         <div class="pub-content">
-          <p class="pub-title">
-            MS-Former: Multi-Scale Self-Guided Transformer for Medical Image Segmentation
-          </p>
+          <h3 class="pub-title">MS-Former: Multi-Scale Self-Guided Transformer for Medical Image Segmentation</h3>
           <p class="pub-authors">
             Sanaz Karimijafarbigloo, Reza Azad, <b>Amirhossein Kazerouni</b>, Dorit Merhof
           </p>
@@ -1129,10 +1091,6 @@
           </details>
         </div>
       </article>
-
-
-      <br>
-
       <!-- Article - MMCFormer with image on the left and bullet removed -->
       <article class="post d-flex align-items-center mb-3">
         <!-- Image on the left -->
@@ -1144,9 +1102,7 @@
 
         <!-- Text on the right with padding -->
         <div class="pub-content">
-          <p class="pub-title">
-            MMCFormer: Missing Modality Compensation Transformer for Brain Tumor Segmentation
-          </p>
+          <h3 class="pub-title">MMCFormer: Missing Modality Compensation Transformer for Brain Tumor Segmentation</h3>
           <p class="pub-authors">
             Sanaz Karimijafarbigloo, Reza Azad, <b>Amirhossein Kazerouni</b>, Saeed Ebadollahi, Dorit Merhof
           </p>
@@ -1180,10 +1136,6 @@
           </details>
         </div>
       </article>
-
-
-      <br>
-
       <!-- Article - HiFormer with image on the left and bullet removed -->
       <article class="post d-flex align-items-center mb-3">
         <!-- Image on the left -->
@@ -1195,9 +1147,7 @@
 
         <!-- Text on the right with padding -->
         <div class="pub-content">
-          <p class="pub-title">
-            HiFormer: Hierarchical Multi-scale Representations Using Transformers for Medical Image Segmentation
-          </p>
+          <h3 class="pub-title">HiFormer: Hierarchical Multi-scale Representations Using Transformers for Medical Image Segmentation</h3>
           <p class="pub-authors">
             Moein Heidari*, <b>Amirhossein Kazerouni*</b>, Milad Soltany*, Reza Azad, Ehsan Khodapanah Aghdam, Julien Cohen-Adad, Dorit Merhof
           </p>
@@ -1231,10 +1181,6 @@
           </details>
         </div>
       </article>
-
-
-      <br>
-
       <!-- Article - Real-Time Vision-Based System with image on the left and bullet removed -->
       <article class="post d-flex align-items-center mb-3">
         <!-- Image on the left -->
@@ -1246,9 +1192,7 @@
 
         <!-- Text on the right with padding -->
         <div class="pub-content">
-          <p class="pub-title">
-            An Intelligent Modular Real-Time Vision-Based System for Environment Perception
-          </p>
+          <h3 class="pub-title">An Intelligent Modular Real-Time Vision-Based System for Environment Perception</h3>
           <p class="pub-authors">
             <strong>Amirhossein Kazerouni</strong>, Amirhossein Heydarian, Milad Soltany, Aida Mohammadshahi, Abbas Omidi, Saeed Ebadollahi
           </p>
@@ -1321,31 +1265,19 @@
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>iPortfolio</span></strong>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      <div class="footer-row">
+        <p>&copy; 2026 Amirhossein Kazerouni</p>
       </div>
     </div>
   </footer><!-- End  Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="bi bi-arrow-up-short" aria-hidden="true"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
@@ -1353,3 +1285,6 @@
 </body>
 
 </html>
+
+
+
