@@ -35,9 +35,14 @@
 
         <p class="authors">
           <a href="https://amirhossein-kz.github.io/" target="_blank" rel="noopener noreferrer">Amirhossein Kazerouni</a><sup>1,2,3,4</sup>,
-          Maitreya Suin<sup>3</sup>, Tristan Ty Aumentado-Armstrong<sup>3</sup>, Sina Honari<sup>3</sup>,
-          Amanpreet Walia<sup>3</sup>, Iqbal Mohomed<sup>3</sup>, Konstantinos G. Derpanis<sup>3,5</sup>,
-          Babak Taati<sup>1,2,4</sup>, Alex Levinshtein<sup>3</sup>
+          <a href="https://maitreyasuin.github.io/" target="_blank" rel="noopener noreferrer">Maitreya Suin</a><sup>3</sup>,
+          <a href="https://www.cs.toronto.edu/~taumen/" target="_blank" rel="noopener noreferrer">Tristan Ty Aumentado-Armstrong</a><sup>3</sup>,
+          <a href="https://sinahonari.github.io/" target="_blank" rel="noopener noreferrer">Sina Honari</a><sup>3</sup>,
+          <a href="https://scholar.google.com/citations?hl=en&user=VlSUlBQAAAAJ&view_op=list_works" target="_blank" rel="noopener noreferrer">Amanpreet Walia</a><sup>3</sup>,
+          <a href="https://scholar.google.com/citations?user=naUR8f0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Iqbal Mohomed</a><sup>3</sup>,
+          <a href="https://csprofkgd.github.io/" target="_blank" rel="noopener noreferrer">Konstantinos G. Derpanis</a><sup>1,2,3,5</sup>,
+          <a href="https://www.cs.toronto.edu/~taati/" target="_blank" rel="noopener noreferrer">Babak Taati</a><sup>1,2,4</sup>,
+          <a href="https://scholar.google.com/citations?user=7EFMKWUAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Alex Levinshtein</a><sup>3</sup>
         </p>
         <p class="affiliations">
           <sup>1</sup>University of Toronto |
@@ -51,9 +56,8 @@
         </p>
 
         <div class="links">
-          <a class="btn primary" href="#" aria-disabled="true">Paper (Coming Soon)</a>
+          <a class="btn primary" href="https://arxiv.org/pdf/2603.16570" target="_blank" rel="noopener noreferrer">Paper</a>
           <a class="btn" href="#" aria-disabled="true">Code (Coming Soon)</a>
-          <a class="btn" href="#" aria-disabled="true">arXiv (Coming Soon)</a>
           <a class="btn" href="https://huggingface.co/" target="_blank" rel="noopener noreferrer"><span class="hf-icon" aria-hidden="true">&#129303;</span> Hugging Face</a>
         </div>
 
@@ -118,7 +122,7 @@
 
     <section id="results" class="section">
       <div class="container">
-        <h2>Qualitative Results</h2>
+        <h2>Results</h2>
         <p class="section-note results-intro">
           Face2Scene consistently restores sharper facial identity cues and more coherent scene structure than prior
           restoration baselines. The gallery below is a curated selection from Figures 11-20 of the paper; additional
@@ -131,6 +135,115 @@
             fidelity, and quality metrics, while also producing more consistent restoration of the face, body, and
             background in side-by-side qualitative comparisons.
           </p>
+        </div>
+        <div class="result-group">
+          <div class="result-group-header">
+            <h3>Quantitative Results</h3>
+            <p>
+              Tables 2 and 4 from the paper are reproduced below. They summarize performance on the InScene synthetic
+              validation set, real validation set, and the real test set.
+            </p>
+            <p class="table-legend" aria-label="Metric ranking legend">
+              <span class="metric-chip metric-chip-best">Best</span>
+              <span class="metric-chip metric-chip-second">Second best</span>
+            </p>
+          </div>
+          <div class="table-card">
+            <h4>Table 2. InScene Synthetic Validation Dataset</h4>
+            <div class="table-wrap">
+              <table class="result-table">
+                <thead>
+                  <tr>
+                    <th>Methods</th>
+                    <th>Step</th>
+                    <th>DISTS &darr;</th>
+                    <th>LPIPS &darr;</th>
+                    <th>PSNR &uarr;</th>
+                    <th>SSIM &uarr;</th>
+                    <th>FID &darr;</th>
+                    <th>MUSIQ &uarr;</th>
+                    <th>C-IQA &uarr;</th>
+                    <th>M-IQA &uarr;</th>
+                    <th>LIQE &uarr;</th>
+                    <th>TOPIQ &uarr;</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>SUPIR [57]</td><td>50</td><td>0.1361</td><td>0.3123</td><td>24.0834</td><td>0.6293</td><td>24.85</td><td>70.2011</td><td>0.6015</td><td>0.3629</td><td>4.0243</td><td>0.6011</td></tr>
+                  <tr><td>DiffBIR [30]</td><td>50</td><td>0.1831</td><td>0.3958</td><td>23.5234</td><td>0.5301</td><td>36.15</td><td>68.5089</td><td>0.6975</td><td>0.4476</td><td>3.3834</td><td>0.6419</td></tr>
+                  <tr><td>ResShift [58]</td><td>4</td><td>0.1859</td><td>0.3648</td><td>24.6416</td><td>0.5947</td><td>25.64</td><td>64.5717</td><td>0.6158</td><td>0.3493</td><td>2.9746</td><td>0.5090</td></tr>
+                  <tr><td>PASD [54]</td><td>20</td><td>0.1623</td><td>0.4014</td><td>25.4177</td><td>0.5644</td><td>21.29</td><td>65.3052</td><td>0.4745</td><td>0.2943</td><td>3.0844</td><td>0.4861</td></tr>
+                  <tr><td>OSEDiff [52]</td><td>1</td><td>0.1287</td><td>0.2881</td><td>24.2400</td><td>0.6057</td><td>22.67</td><td>71.0863</td><td>0.6634</td><td>0.3803</td><td>4.1167</td><td>0.6297</td></tr>
+                  <tr><td>SinSR [52]</td><td>1</td><td>0.1776</td><td>0.3877</td><td>24.1338</td><td>0.5575</td><td>26.73</td><td>67.4416</td><td>0.7149</td><td>0.4189</td><td>3.3682</td><td>0.5759</td></tr>
+                  <tr><td>InvSR [59]</td><td>1</td><td>0.1318</td><td>0.3207</td><td>23.8608</td><td>0.5901</td><td>22.92</td><td>71.1180</td><td>0.7074</td><td>0.4051</td><td>4.0872</td><td>0.6201</td></tr>
+                  <tr><td>S3Diff [60]</td><td>1</td><td>0.1131</td><td>0.2557</td><td>23.5955</td><td>0.5916</td><td>18.06</td><td>72.1764</td><td>0.6980</td><td>0.3858</td><td>4.4248</td><td>0.6233</td></tr>
+                  <tr class="ours"><td>Face2Scene (ours)</td><td>1+N</td><td>0.1007</td><td>0.2421</td><td>22.9040</td><td>0.5574</td><td>15.26</td><td>74.7630</td><td>0.7640</td><td>0.4347</td><td>4.7157</td><td>0.6515</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="table-card">
+            <h4>Table 2. InScene Real Validation Dataset</h4>
+            <div class="table-wrap">
+              <table class="result-table">
+                <thead>
+                  <tr>
+                    <th>Methods</th>
+                    <th>Step</th>
+                    <th>DISTS &darr;</th>
+                    <th>LPIPS &darr;</th>
+                    <th>PSNR &uarr;</th>
+                    <th>SSIM &uarr;</th>
+                    <th>FID &darr;</th>
+                    <th>MUSIQ &uarr;</th>
+                    <th>C-IQA &uarr;</th>
+                    <th>M-IQA &uarr;</th>
+                    <th>LIQE &uarr;</th>
+                    <th>TOPIQ &uarr;</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>SUPIR [57]</td><td>50</td><td>0.2361</td><td>0.5563</td><td>17.6401</td><td>0.4783</td><td>45.22</td><td>70.4331</td><td>0.5474</td><td>0.4015</td><td>4.1305</td><td>0.6071</td></tr>
+                  <tr><td>DiffBIR [30]</td><td>50</td><td>0.2855</td><td>0.6441</td><td>16.8264</td><td>0.4075</td><td>73.59</td><td>64.5391</td><td>0.6243</td><td>0.4525</td><td>3.0365</td><td>0.6063</td></tr>
+                  <tr><td>ResShift [58]</td><td>4</td><td>0.2802</td><td>0.6058</td><td>17.5564</td><td>0.4802</td><td>48.45</td><td>62.9389</td><td>0.6074</td><td>0.3833</td><td>3.0714</td><td>0.4918</td></tr>
+                  <tr><td>PASD [54]</td><td>20</td><td>0.2483</td><td>0.5786</td><td>18.0514</td><td>0.5221</td><td>49.90</td><td>70.5563</td><td>0.5390</td><td>0.3903</td><td>3.7782</td><td>0.5881</td></tr>
+                  <tr><td>OSEDiff [52]</td><td>1</td><td>0.2355</td><td>0.5393</td><td>17.6212</td><td>0.5078</td><td>51.10</td><td>73.1528</td><td>0.6269</td><td>0.4346</td><td>4.4328</td><td>0.6569</td></tr>
+                  <tr><td>SinSR [52]</td><td>1</td><td>0.2624</td><td>0.6122</td><td>17.6535</td><td>0.4677</td><td>49.44</td><td>67.0641</td><td>0.6990</td><td>0.4422</td><td>3.4859</td><td>0.5671</td></tr>
+                  <tr><td>InvSR [59]</td><td>1</td><td>0.2311</td><td>0.5467</td><td>17.4140</td><td>0.4916</td><td>49.35</td><td>72.9144</td><td>0.6911</td><td>0.4569</td><td>4.4271</td><td>0.6441</td></tr>
+                  <tr><td>S3Diff [60]</td><td>1</td><td>0.2231</td><td>0.5149</td><td>17.1439</td><td>0.4894</td><td>38.64</td><td>73.8209</td><td>0.6734</td><td>0.4480</td><td>4.7060</td><td>0.6627</td></tr>
+                  <tr class="ours"><td>Face2Scene (ours)</td><td>1+N</td><td>0.1178</td><td>0.2502</td><td>22.8975</td><td>0.6197</td><td>42.21</td><td>75.3739</td><td>0.7015</td><td>0.4714</td><td>4.8044</td><td>0.6777</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="table-card">
+            <h4>Table 4. InScene Test Dataset</h4>
+            <div class="table-wrap">
+              <table class="result-table">
+                <thead>
+                  <tr>
+                    <th>Methods</th>
+                    <th>MUSIQ &uarr;</th>
+                    <th>C-IQA &uarr;</th>
+                    <th>M-IQA &uarr;</th>
+                    <th>LIQE &uarr;</th>
+                    <th>TOPIQ &uarr;</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>SUPIR [57]</td><td>60.4119</td><td>0.3506</td><td>0.3108</td><td>2.8347</td><td>0.4210</td></tr>
+                  <tr><td>DiffBIR [30]</td><td>71.4031</td><td>0.6701</td><td>0.5238</td><td>4.3273</td><td>0.6751</td></tr>
+                  <tr><td>ResShift [58]</td><td>65.8328</td><td>0.5414</td><td>0.3827</td><td>3.7667</td><td>0.4916</td></tr>
+                  <tr><td>PASD [54]</td><td>71.6666</td><td>0.5920</td><td>0.4849</td><td>4.3644</td><td>0.6483</td></tr>
+                  <tr><td>OSEDiff [52]</td><td>72.6963</td><td>0.6327</td><td>0.4819</td><td>4.4864</td><td>0.6583</td></tr>
+                  <tr><td>SinSR [49]</td><td>71.6175</td><td>0.5965</td><td>0.4947</td><td>4.3157</td><td>0.6746</td></tr>
+                  <tr><td>InvSR [59]</td><td>72.7069</td><td>0.4559</td><td>0.4145</td><td>4.3888</td><td>0.6665</td></tr>
+                  <tr><td>S3Diff [60]</td><td>69.4941</td><td>0.5423</td><td>0.4014</td><td>4.1888</td><td>0.5805</td></tr>
+                  <tr class="ours"><td>Face2Scene</td><td>73.3047</td><td>0.6407</td><td>0.4859</td><td>4.6973</td><td>0.6846</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
         <div class="result-group">
           <div class="result-group-header">

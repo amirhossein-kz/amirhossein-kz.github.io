@@ -197,10 +197,48 @@
   });
 
   /**
+   * Publication teaser lightbox triggers
+   */
+  const publicationMedia = select('.pub-media', true)
+  if (publicationMedia.length) {
+    publicationMedia.forEach((media) => {
+      if (media.querySelector('.pub-media-link')) return
+
+      const image = media.querySelector('img')
+      const video = media.querySelector('video')
+      const asset = image || video
+      if (!asset) return
+
+      const trigger = document.createElement('a')
+      const label = document.createElement('span')
+      const teaserLabel = asset.getAttribute('alt') || asset.getAttribute('aria-label') || 'Publication teaser'
+
+      trigger.className = 'pub-media-link pub-teaser-lightbox'
+      trigger.href = asset.currentSrc || asset.getAttribute('src') || ''
+      trigger.setAttribute('aria-label', `Open full teaser for ${teaserLabel}`)
+      trigger.setAttribute('data-gallery', 'publication-teasers')
+      trigger.setAttribute('data-glightbox', `title: ${teaserLabel}`)
+
+      if (video) {
+        trigger.setAttribute('data-type', 'video')
+      }
+
+      label.className = 'pub-media-link-label'
+      label.innerHTML = `<i class="fas fa-expand-alt" aria-hidden="true"></i><span>View full teaser</span>`
+      trigger.appendChild(label)
+      media.appendChild(trigger)
+    })
+  }
+
+  /**
    * Initiate portfolio lightbox 
    */
   const portfolioLightbox = GLightbox({
     selector: '.portfolio-lightbox'
+  });
+
+  const publicationTeaserLightbox = GLightbox({
+    selector: '.pub-teaser-lightbox'
   });
 
   /**

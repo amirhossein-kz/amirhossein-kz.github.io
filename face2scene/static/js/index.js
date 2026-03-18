@@ -23,6 +23,65 @@
     });
   }
 
+  const rankMetricTables = function () {
+    const parseMetricValue = function (cell) {
+      if (!cell) return null;
+
+      const text = (cell.textContent || "").replace(/,/g, "").trim();
+      const value = Number.parseFloat(text);
+      return Number.isFinite(value) ? value : null;
+    };
+
+    const nearlyEqual = function (left, right) {
+      return Math.abs(left - right) < 1e-9;
+    };
+
+    document.querySelectorAll(".result-table").forEach(function (table) {
+      const headers = Array.from(table.querySelectorAll("thead th"));
+      const rows = Array.from(table.querySelectorAll("tbody tr"));
+
+      headers.forEach(function (header, columnIndex) {
+        const label = (header.textContent || "").trim();
+        const direction = label.includes("\u2193") ? "asc" : label.includes("\u2191") ? "desc" : null;
+        if (!direction) return;
+
+        const rankedCells = rows
+          .map(function (row) {
+            const cell = row.cells[columnIndex];
+            const value = parseMetricValue(cell);
+            return value === null ? null : { cell: cell, value: value };
+          })
+          .filter(Boolean);
+
+        if (rankedCells.length < 2) return;
+
+        rankedCells.sort(function (left, right) {
+          return direction === "asc" ? left.value - right.value : right.value - left.value;
+        });
+
+        const uniqueValues = rankedCells.reduce(function (values, item) {
+          if (!values.some(function (value) { return nearlyEqual(value, item.value); })) {
+            values.push(item.value);
+          }
+          return values;
+        }, []);
+
+        const bestValue = uniqueValues[0];
+        const secondBestValue = uniqueValues[1];
+
+        rankedCells.forEach(function (item) {
+          if (nearlyEqual(item.value, bestValue)) {
+            item.cell.classList.add("metric-best");
+          } else if (secondBestValue !== undefined && nearlyEqual(item.value, secondBestValue)) {
+            item.cell.classList.add("metric-second");
+          }
+        });
+      });
+    });
+  };
+
+  rankMetricTables();
+
   const lightbox = document.getElementById("imageLightbox");
   const lightboxImage = document.getElementById("lightboxImage");
   const lightboxClose = document.getElementById("lightboxClose");
