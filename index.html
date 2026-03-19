@@ -459,45 +459,6 @@
       <article class="post d-flex align-items-center mb-3">
         <!-- Image on the left -->
         <div class="me-3 flex-shrink-0 position-relative pub-media">
-          <img src="assets/img/medscale_former_teaser.png" alt="MedScale-Former visual teaser" class="img-fluid rounded shadow-sm" loading="lazy">
-          <!-- Vertical border separator -->
-          <div class="pub-separator"></div>
-        </div>
-
-        <!-- Text on the right with padding -->
-        <div class="pub-content">
-          <h3 class="pub-title">MedScale-Former: Self-guided multiscale transformer for medical image segmentation</h3>
-          <p class="pub-authors">
-            Sanaz Karimijafarbigloo, Reza Azad, <b>Amirhossein Kazerouni</b>, Dorit Merhof
-          </p>
-          <div>
-            <p class="pub-venue">
-              <i class="fas fa-calendar-alt"></i>
-              <strong>Journal:</strong>
-              <span><b>Medical Image Analysis (MedIA)</b></span>
-            </p>
-            <span class="pub-link">
-              <a href="https://www.sciencedirect.com/science/article/abs/pii/S136184152500101X" target="_blank" rel="noopener noreferrer">
-                <i class="far fa-file-alt"></i> Paper
-              </a>
-            </span>
-          </div>
-          <details class="pub-abstract">
-            <summary class="pub-abstract-toggle" aria-label="Show abstract">
-              <i class="fas fa-chevron-down"></i>
-            </summary>
-            <div class="pub-abstract-body">
-              <p>
-                Accurate medical image segmentation is crucial for enabling automated clinical decision procedures. However, existing supervised deep learning methods for medical image segmentation face significant challenges due to their reliance on extensive labeled training data. To address this limitation, our novel approach introduces a dual-branch transformer network operating on two scales, strategically encoding global contextual dependencies while preserving local information. To promote self-supervised learning, our method leverages semantic dependencies between different scales, generating a supervisory signal for inter-scale consistency. Additionally, it incorporates a spatial stability loss within each scale, fostering self-supervised content clustering. While intra-scale and inter-scale consistency losses enhance feature uniformity within clusters, we introduce a cross-entropy loss function atop the clustering score map to effectively model cluster distributions and refine decision boundaries. Furthermore, to account for pixel-level similarities between organ or lesion subpixels, we propose a selective kernel regional attention module as a plug and play component. This module adeptly captures and outlines organ or lesion regions, slightly enhancing the definition of object boundaries. Our experimental results on skin lesion, lung organ, and multiple myeloma plasma cell segmentation tasks demonstrate the superior performance of our method compared to state-of-the-art approaches.
-              </p>
-            </div>
-          </details>
-        </div>
-      </article>
-      <!-- Article -5 with image on the left and bullet removed -->
-      <article class="post d-flex align-items-center mb-3">
-        <!-- Image on the left -->
-        <div class="me-3 flex-shrink-0 position-relative pub-media">
           <img src="assets/img/sum_gif.gif" alt="SUM visual teaser" class="img-fluid rounded shadow-sm" loading="lazy">
           <!-- Vertical border separator -->
           <div class="pub-separator"></div>
@@ -549,32 +510,26 @@
       <article class="post d-flex align-items-center mb-3">
         <!-- Image on the left -->
         <div class="me-3 flex-shrink-0 position-relative pub-media">
-          <img src="assets/img/fusenet_teaser.png" alt="FuseNet visual teaser" class="img-fluid rounded shadow-sm" loading="lazy">
+          <img src="assets/img/medscale_former_teaser.png" alt="MedScale-Former visual teaser" class="img-fluid rounded shadow-sm" loading="lazy">
           <!-- Vertical border separator -->
           <div class="pub-separator"></div>
         </div>
 
         <!-- Text on the right with padding -->
         <div class="pub-content">
-          <h3 class="pub-title">FuseNet: Self-Supervised Dual-Path Network for Medical Image Segmentation</h3>
+          <h3 class="pub-title">MedScale-Former: Self-guided multiscale transformer for medical image segmentation</h3>
           <p class="pub-authors">
-            <b>Amirhossein Kazerouni</b>, Sanaz Karimijafarbigloo, Reza Azad, Yury Velichko, Ulas Bagci, Dorit Merhof
+            Sanaz Karimijafarbigloo, Reza Azad, <b>Amirhossein Kazerouni</b>, Dorit Merhof
           </p>
           <div>
             <p class="pub-venue">
               <i class="fas fa-calendar-alt"></i>
-              <strong>Conference:</strong>
-              <span><b>ISBI 2024</b></span>
+              <strong>Journal:</strong>
+              <span><b>Medical Image Analysis (MedIA)</b></span>
             </p>
             <span class="pub-link">
-              <a href="https://arxiv.org/abs/2311.13069" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.sciencedirect.com/science/article/abs/pii/S136184152500101X" target="_blank" rel="noopener noreferrer">
                 <i class="far fa-file-alt"></i> Paper
-              </a>
-            </span>
-            |
-            <span class="pub-link">
-              <a href="https://github.com/xmindflow/FuseNet" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-github"></i> GitHub
               </a>
             </span>
           </div>
@@ -584,7 +539,7 @@
             </summary>
             <div class="pub-abstract-body">
               <p>
-                Semantic segmentation, a crucial task in computer vision, often relies on labor-intensive and costly annotated datasets for training. In response to this challenge, we introduce FuseNet, a dual-stream framework for self-supervised semantic segmentation that eliminates the need for manual annotation. FuseNet leverages the shared semantic dependencies between the original and augmented images to create a clustering space, effectively assigning pixels to semantically related clusters, and ultimately generating the segmentation map. Additionally, FuseNet incorporates a cross-modal fusion technique that extends the principles of CLIP by replacing textual data with augmented images. This approach enables the model to learn complex visual representations, enhancing robustness against variations similar to CLIP's text invariance. To further improve edge alignment and spatial consistency between neighboring pixels, we introduce an edge refinement loss. This loss function considers edge information to enhance spatial coherence, facilitating the grouping of nearby pixels with similar visual features. Extensive experiments on skin lesion and lung segmentation datasets demonstrate the effectiveness of our method.
+                Accurate medical image segmentation is crucial for enabling automated clinical decision procedures. However, existing supervised deep learning methods for medical image segmentation face significant challenges due to their reliance on extensive labeled training data. To address this limitation, our novel approach introduces a dual-branch transformer network operating on two scales, strategically encoding global contextual dependencies while preserving local information. To promote self-supervised learning, our method leverages semantic dependencies between different scales, generating a supervisory signal for inter-scale consistency. Additionally, it incorporates a spatial stability loss within each scale, fostering self-supervised content clustering. While intra-scale and inter-scale consistency losses enhance feature uniformity within clusters, we introduce a cross-entropy loss function atop the clustering score map to effectively model cluster distributions and refine decision boundaries. Furthermore, to account for pixel-level similarities between organ or lesion subpixels, we propose a selective kernel regional attention module as a plug and play component. This module adeptly captures and outlines organ or lesion regions, slightly enhancing the definition of object boundaries. Our experimental results on skin lesion, lung organ, and multiple myeloma plasma cell segmentation tasks demonstrate the superior performance of our method compared to state-of-the-art approaches.
               </p>
             </div>
           </details>
@@ -636,6 +591,51 @@
             <div class="pub-abstract-body">
               <p>
                 Implicit Neural Representations (INRs) have revolutionized signal representation by leveraging neural networks to provide continuous and smooth representations of complex data. However, existing INRs face limitations in capturing fine-grained details, handling noise, and adapting to diverse signal types. To address these challenges, we introduce INCODE, a novel approach that enhances the control of the sinusoidal-based activation function in INRs using deep prior knowledge. INCODE comprises a harmonizer network and a composer network, where the harmonizer network dynamically adjusts key parameters of the activation function. Through a task-specific pre-trained model, INCODE adapts the task-specific parameters to optimize the representation process. Our approach not only excels in representation, but also extends its prowess to tackle complex tasks such as audio, image, and 3D shape reconstructions, as well as intricate challenges such as neural radiance fields (NeRFs), and inverse problems, including denoising, super-resolution, inpainting, and CT reconstruction. Through comprehensive experiments, INCODE demonstrates its superiority in terms of robustness, accuracy, quality, and convergence rate, broadening the scope of signal representation.
+              </p>
+            </div>
+          </details>
+        </div>
+      </article>
+      <!-- Article -5 with image on the left and bullet removed -->
+      <article class="post d-flex align-items-center mb-3">
+        <!-- Image on the left -->
+        <div class="me-3 flex-shrink-0 position-relative pub-media">
+          <img src="assets/img/fusenet_teaser.png" alt="FuseNet visual teaser" class="img-fluid rounded shadow-sm" loading="lazy">
+          <!-- Vertical border separator -->
+          <div class="pub-separator"></div>
+        </div>
+
+        <!-- Text on the right with padding -->
+        <div class="pub-content">
+          <h3 class="pub-title">FuseNet: Self-Supervised Dual-Path Network for Medical Image Segmentation</h3>
+          <p class="pub-authors">
+            <b>Amirhossein Kazerouni</b>, Sanaz Karimijafarbigloo, Reza Azad, Yury Velichko, Ulas Bagci, Dorit Merhof
+          </p>
+          <div>
+            <p class="pub-venue">
+              <i class="fas fa-calendar-alt"></i>
+              <strong>Conference:</strong>
+              <span><b>ISBI 2024</b></span>
+            </p>
+            <span class="pub-link">
+              <a href="https://arxiv.org/abs/2311.13069" target="_blank" rel="noopener noreferrer">
+                <i class="far fa-file-alt"></i> Paper
+              </a>
+            </span>
+            |
+            <span class="pub-link">
+              <a href="https://github.com/xmindflow/FuseNet" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </span>
+          </div>
+          <details class="pub-abstract">
+            <summary class="pub-abstract-toggle" aria-label="Show abstract">
+              <i class="fas fa-chevron-down"></i>
+            </summary>
+            <div class="pub-abstract-body">
+              <p>
+                Semantic segmentation, a crucial task in computer vision, often relies on labor-intensive and costly annotated datasets for training. In response to this challenge, we introduce FuseNet, a dual-stream framework for self-supervised semantic segmentation that eliminates the need for manual annotation. FuseNet leverages the shared semantic dependencies between the original and augmented images to create a clustering space, effectively assigning pixels to semantically related clusters, and ultimately generating the segmentation map. Additionally, FuseNet incorporates a cross-modal fusion technique that extends the principles of CLIP by replacing textual data with augmented images. This approach enables the model to learn complex visual representations, enhancing robustness against variations similar to CLIP's text invariance. To further improve edge alignment and spatial consistency between neighboring pixels, we introduce an edge refinement loss. This loss function considers edge information to enhance spatial coherence, facilitating the grouping of nearby pixels with similar visual features. Extensive experiments on skin lesion and lung segmentation datasets demonstrate the effectiveness of our method.
               </p>
             </div>
           </details>
