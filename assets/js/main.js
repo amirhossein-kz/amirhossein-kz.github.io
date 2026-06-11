@@ -179,6 +179,7 @@
   }
 
   const publicationYearByTitle = {
+    "AVIS: Adaptive Test-Time Scaling for Vision-Language Models": "2026",
     "Face2Scene: Using Facial Degradation as an Oracle for Diffusion-Based Scene Restoration": "2026",
     "LIFT: Latent Implicit Functions for Task- and Data-Agnostic Encoding": "2025",
     "MedScale-Former: Self-guided multiscale transformer for medical image segmentation": "2025",

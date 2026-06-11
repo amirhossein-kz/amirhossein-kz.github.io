@@ -621,6 +621,11 @@ section {
   line-height: 1.55;
 }
 
+.pub-author-note {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
 .pub-venue {
   margin-bottom: 8px;
   color: #374151;
