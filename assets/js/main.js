@@ -179,6 +179,7 @@
   }
 
   const publicationYearByTitle = {
+    "A Unified Theory of Sinusoidal Activation Families for Implicit Neural Representations": "2026",
     "AVIS: Adaptive Test-Time Scaling for Vision-Language Models": "2026",
     "Face2Scene: Using Facial Degradation as an Oracle for Diffusion-Based Scene Restoration": "2026",
     "LIFT: Latent Implicit Functions for Task- and Data-Agnostic Encoding": "2025",
