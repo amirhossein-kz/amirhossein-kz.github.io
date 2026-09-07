@@ -22,67 +22,11 @@
     element.addEventListener("scroll", listener);
   };
 
-  const body = select("body");
-  const navbarLinks = select("#navbar .scrollto", true);
-  const mobileNavToggle = select(".mobile-nav-toggle");
-  const mobileNavIcon = mobileNavToggle ? mobileNavToggle.querySelector("i") : null;
+  const navbarLinks = select("#navbar .nav-link.scrollto", true);
   const backToTop = select(".back-to-top");
-  const themeToggle = select(".theme-toggle");
-  const themeToggleIcon = themeToggle ? themeToggle.querySelector("i") : null;
-  const themeToggleLabel = themeToggle ? themeToggle.querySelector("span") : null;
-  const themeColorMeta = select("#theme-color-meta");
-  const darkThemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
-
-  const applyTheme = (theme, persist = false) => {
-    if (!body) return;
-
-    const resolvedTheme = theme === "dark" ? "dark" : "light";
-    const isDark = resolvedTheme === "dark";
-    body.setAttribute("data-theme", resolvedTheme);
-
-    if (themeToggle) {
-      themeToggle.setAttribute("aria-pressed", String(isDark));
-      themeToggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
-    }
-
-    if (themeToggleIcon) {
-      themeToggleIcon.classList.toggle("bi-moon-stars", !isDark);
-      themeToggleIcon.classList.toggle("bi-sun", isDark);
-    }
-
-    if (themeToggleLabel) {
-      themeToggleLabel.textContent = isDark ? "Light mode" : "Dark mode";
-    }
-
-    if (themeColorMeta) {
-      themeColorMeta.setAttribute("content", isDark ? "#0b1320" : "#dce5f0");
-    }
-
-    if (persist) {
-      window.localStorage.setItem("homepage-theme", resolvedTheme);
-    }
-  };
-
-  const getPreferredTheme = () => {
-    const storedTheme = window.localStorage.getItem("homepage-theme");
-    if (storedTheme === "light" || storedTheme === "dark") {
-      return storedTheme;
-    }
-
-    return "light";
-  };
-
-  const syncMobileNavToggle = () => {
-    if (!mobileNavToggle || !mobileNavIcon || !body) return;
-
-    const isOpen = body.classList.contains("mobile-nav-active");
-    mobileNavToggle.setAttribute("aria-expanded", String(isOpen));
-    mobileNavToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
-    mobileNavIcon.classList.toggle("bi-list", !isOpen);
-    mobileNavIcon.classList.toggle("bi-x", isOpen);
-  };
 
   const navbarLinksActive = () => {
+    const firstSection = select("#about");
     const nearBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 2;
     if (nearBottom && navbarLinks.length) {
       navbarLinks.forEach((link) => link.classList.remove("active"));
@@ -91,6 +35,11 @@
     }
 
     const position = window.scrollY + 120;
+    if (firstSection && position < firstSection.offsetTop) {
+      navbarLinks.forEach((link, index) => link.classList.toggle("active", index === 0));
+      return;
+    }
+
     navbarLinks.forEach((link) => {
       if (!link.hash) return;
       const section = select(link.hash);
@@ -110,7 +59,7 @@
 
     window.scrollTo({
       top: section.offsetTop,
-      behavior: "smooth"
+      behavior: "auto"
     });
   };
 
@@ -119,64 +68,19 @@
     backToTop.classList.toggle("active", window.scrollY > 100);
   };
 
-  if (mobileNavToggle) {
-    mobileNavToggle.addEventListener("click", () => {
-      if (!body) return;
-      body.classList.toggle("mobile-nav-active");
-      syncMobileNavToggle();
-    });
-  }
-
-  if (themeToggle) {
-    themeToggle.addEventListener("click", () => {
-      const nextTheme = body?.getAttribute("data-theme") === "dark" ? "light" : "dark";
-      applyTheme(nextTheme, true);
-    });
-  }
-
-  darkThemeQuery.addEventListener("change", (event) => {
-    if (window.localStorage.getItem("homepage-theme")) return;
-    applyTheme(event.matches ? "dark" : "light");
-  });
-
   on("click", ".scrollto", function(event) {
     if (!this.hash || !select(this.hash)) return;
 
     event.preventDefault();
 
-    if (body && body.classList.contains("mobile-nav-active")) {
-      body.classList.remove("mobile-nav-active");
-      syncMobileNavToggle();
-    }
-
     scrollToSection(this.hash);
   }, true);
-
-  applyTheme(getPreferredTheme());
 
   window.addEventListener("load", () => {
     if (window.location.hash && select(window.location.hash)) {
       scrollToSection(window.location.hash);
     }
   });
-
-  const typed = select(".typed");
-  if (typed) {
-    const typedStrings = (typed.getAttribute("data-typed-items") || "")
-      .split(",")
-      .map((item) => item.trim())
-      .filter(Boolean);
-
-    if (typedStrings.length) {
-      new Typed(".typed", {
-        strings: typedStrings,
-        loop: true,
-        typeSpeed: 100,
-        backSpeed: 50,
-        backDelay: 2000
-      });
-    }
-  }
 
   const publicationYearByTitle = {
     "A Unified Theory of Sinusoidal Activation Families for Implicit Neural Representations": "2026",
@@ -202,21 +106,89 @@
     "An Intelligent Modular Real-Time Vision-Based System for Environment Perception": "2022"
   };
 
+  const newsItems = select("#news .news-list > li", true);
+  const newsToggle = select(".news-toggle");
+  const recentNewsCount = 6;
+
+  const updateNewsVisibility = (expanded) => {
+    newsItems.forEach((item, index) => {
+      item.classList.toggle("news-hidden", !expanded && index >= recentNewsCount);
+    });
+
+    if (!newsToggle) return;
+    newsToggle.textContent = expanded ? "show recent news only" : "show older news";
+    newsToggle.setAttribute("aria-expanded", String(expanded));
+  };
+
+  if (newsToggle && newsItems.length > recentNewsCount) {
+    newsToggle.addEventListener("click", () => {
+      updateNewsVisibility(newsToggle.getAttribute("aria-expanded") !== "true");
+    });
+  } else if (newsToggle) {
+    newsToggle.hidden = true;
+  }
+
   const publicationCards = select("#publications .post", true);
   publicationCards.forEach((card) => {
     const content = card.querySelector(".pub-content");
     if (!content) return;
 
     const title = content.querySelector(".pub-title");
-    if (!title) return;
-
-    const normalizedTitle = (title.textContent || "")
+    const normalizedTitle = (title?.textContent || "Publication")
       .replace(/\s+/g, " ")
       .trim();
 
     if (publicationYearByTitle[normalizedTitle]) {
       card.dataset.year = publicationYearByTitle[normalizedTitle];
     }
+
+    const venueGroup = content.querySelector(".pub-venue")?.parentElement;
+    const abstract = content.querySelector(".pub-abstract");
+    const links = [...content.querySelectorAll(".pub-link a")];
+
+    if (!venueGroup || content.querySelector(".pub-actions") || (!links.length && !abstract)) return;
+
+    const actions = document.createElement("div");
+    actions.className = "pub-actions";
+    actions.setAttribute("aria-label", `Links for ${normalizedTitle}`);
+
+    links.forEach((link) => {
+      const originalLabel = (link.textContent || "")
+        .replace(/\s+/g, " ")
+        .trim();
+      let label = originalLabel.toLowerCase();
+
+      if (/project/.test(label)) label = "project";
+      else if (/paper|pdf|arxiv/.test(label)) label = "paper";
+      else if (/github|code/.test(label)) label = "code";
+      else if (/dataset|data/.test(label)) label = "data";
+      else if (/weight|model/.test(label)) label = "weights";
+
+      link.textContent = label;
+      link.className = "pub-action-link";
+      link.setAttribute("aria-label", `${label} for ${normalizedTitle} (opens in a new tab)`);
+      actions.appendChild(link);
+    });
+
+    if (abstract) {
+      const toggle = abstract.querySelector(".pub-abstract-toggle");
+
+      if (toggle) {
+        const updateAbstractLabel = () => {
+          toggle.setAttribute(
+            "aria-label",
+            `${abstract.open ? "Hide" : "Show"} abstract for ${normalizedTitle}`
+          );
+        };
+
+        abstract.addEventListener("toggle", updateAbstractLabel);
+        updateAbstractLabel();
+      }
+
+      actions.appendChild(abstract);
+    }
+
+    venueGroup.insertAdjacentElement("afterend", actions);
   });
 
   const publicationStatus = select(".publication-status");
@@ -258,6 +230,13 @@
     const asset = image || video;
     if (!asset) return;
 
+    const assetSource = asset.getAttribute("src") || "";
+    if (video) {
+      media.dataset.mediaType = "video";
+    } else if (/\.gif(?:$|[?#])/i.test(assetSource)) {
+      media.dataset.mediaType = "animation";
+    }
+
     const trigger = document.createElement("a");
     const label = document.createElement("span");
     const teaserLabel = asset.getAttribute("alt") || asset.getAttribute("aria-label") || "Publication teaser";
@@ -273,7 +252,7 @@
     }
 
     label.className = "pub-media-link-label";
-    label.innerHTML = '<i class="fas fa-expand-alt" aria-hidden="true"></i><span>View full teaser</span>';
+    label.innerHTML = '<span>view demo</span><i class="fas fa-expand-alt" aria-hidden="true"></i>';
     trigger.appendChild(label);
     media.appendChild(trigger);
   });
@@ -285,15 +264,9 @@
   window.addEventListener("load", () => {
     navbarLinksActive();
     toggleBackToTop();
-    syncMobileNavToggle();
+    updateNewsVisibility(false);
     applyPublicationFilter("all");
 
-    AOS.init({
-      duration: 1000,
-      easing: "ease-in-out",
-      once: true,
-      mirror: false
-    });
   });
 
   onscroll(document, navbarLinksActive);
