@@ -1,8 +1,8 @@
 :root {
   --background: #ffffff;
-  --text: #050505;
+  --text: #172333;
   --muted: #575757;
-  --accent: #0076df;
+  --accent: #1768a6;
   --accent-dark: #00369f;
   --border: #e8e8e8;
   --soft-border: #f0f0f0;
@@ -64,7 +64,7 @@ p {
 .container,
 .container-fluid {
   width: calc(100% - 30px);
-  max-width: 900px;
+  max-width: 960px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 0;
@@ -159,14 +159,15 @@ body[data-theme="dark"] .nav-links .nav-link.active {
 #hero,
 body[data-theme="dark"] #hero {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
-  gap: 1.5rem;
+  gap: 2.5rem;
   width: calc(100% - 30px);
   height: auto;
   min-height: 0;
-  margin: 0 auto 1.5rem;
-  padding: 0;
+  margin: 0 auto 2.25rem;
+  padding: 1rem 0 2.25rem;
+  border-bottom: 1px solid var(--border);
   background: none;
 }
 
@@ -178,12 +179,12 @@ body[data-theme="dark"] #hero::before {
 .profile-img {
   display: block;
   flex-shrink: 0;
-  width: 200px;
-  height: 200px;
+  width: 224px;
+  height: 280px;
   object-fit: cover;
   border: 0;
-  border-radius: 8px;
-  box-shadow: none;
+  border-radius: 10px;
+  box-shadow: 0 8px 28px rgba(23, 35, 51, 0.08);
 }
 
 .profile-info {
@@ -194,9 +195,9 @@ body[data-theme="dark"] #hero::before {
 #hero .profile-name {
   margin: 0 0 0.25rem;
   color: var(--text);
-  font-size: 1.75rem;
+  font-size: clamp(1.75rem, 3.5vw, 2.55rem);
   font-weight: 700;
-  letter-spacing: 0;
+  letter-spacing: -0.035em;
   line-height: 1.2;
   text-shadow: none;
 }
@@ -216,6 +217,43 @@ body[data-theme="dark"] #hero .profile-desc {
   align-items: center;
   gap: 0.65rem;
   margin-top: 0.55rem;
+}
+
+.profile-eyebrow {
+  margin: 0 0 0.65rem;
+  color: var(--muted);
+  font-family: "Source Sans 3", Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+#hero .profile-focus {
+  margin: 0.8rem 0 1rem;
+  color: var(--text);
+  font-size: clamp(1.3rem, 2.8vw, 1.8rem);
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+}
+
+.profile-focus span {
+  color: var(--accent);
+}
+
+.research-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  font-family: "Source Sans 3", Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.about-copy > p:first-child {
+  font-size: 1.12rem;
+  line-height: 1.7;
 }
 
 .profile-social a,
@@ -1027,6 +1065,7 @@ body[data-theme="dark"] .back-to-top {
   #hero {
     flex-direction: column;
     align-items: center;
+    gap: 1.5rem;
     text-align: center;
   }
 
